@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <test name="Power Mode Tests" thread-count="5" >
+    <classes>
+    <class name="com.hotelhub.powermode.tests.HotelBookingTest"/>
+	<class name="com.hotelhub.powermode.tests.RegressionTest"/>
+       <class name="com.hotelhub.powermode.tests.DevTest"/>
+   </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

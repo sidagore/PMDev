@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-PowerMode_by_groups">
+              <span class="suite-name border-failed">PowerMode by groups</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-PowerMode_by_groups">
+                    <span>C:\Users\sprasad\AppData\Local\Temp\testng-eclipse--1756606295\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-PowerMode_by_groups">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-PowerMode_by_groups">
+                    <span>4 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-PowerMode_by_groups">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-PowerMode_by_groups">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-PowerMode_by_groups">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-PowerMode_by_groups">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-PowerMode_by_groups" class="hide-methods failed suite-PowerMode_by_groups"> (hide)</a> <!-- hide-methods failed suite-PowerMode_by_groups -->
+                      <a href="#" panel-name="suite-PowerMode_by_groups" class="show-methods failed suite-PowerMode_by_groups"> (show)</a> <!-- show-methods failed suite-PowerMode_by_groups -->
+                    </span>
+                    <div class="method-list-content failed suite-PowerMode_by_groups">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PowerMode_by_groups" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="BCOMbookingByAddingNewAMEXCard">BCOMbookingByAddingNewAMEXCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-PowerMode_by_groups -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-PowerMode_by_groups" class="hide-methods passed suite-PowerMode_by_groups"> (hide)</a> <!-- hide-methods passed suite-PowerMode_by_groups -->
+                      <a href="#" panel-name="suite-PowerMode_by_groups" class="show-methods passed suite-PowerMode_by_groups"> (show)</a> <!-- show-methods passed suite-PowerMode_by_groups -->
+                    </span>
+                    <div class="method-list-content passed suite-PowerMode_by_groups">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PowerMode_by_groups" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="BCOMbookingByAddingNewVISACard">BCOMbookingByAddingNewVISACard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PowerMode_by_groups" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="BCOMbookingWithAutoBookFeature">BCOMbookingWithAutoBookFeature</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PowerMode_by_groups" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="BCOMbookingWithPortraitCard">BCOMbookingWithPortraitCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PowerMode_by_groups" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="HHEbookingByAddingNewVISACard">HHEbookingByAddingNewVISACard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PowerMode_by_groups" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="HHEbookingWithAutoBookFeature">HHEbookingWithAutoBookFeature</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PowerMode_by_groups" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="HHEbookingWithPortraitCard">HHEbookingWithPortraitCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-PowerMode_by_groups -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-PowerMode_by_groups" class="panel PowerMode_by_groups">
+          <div class="suite-PowerMode_by_groups-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.hotelhub.powermode.tests.HotelBookingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="BCOMbookingByAddingNewAMEXCard">
+                  </a> <!-- BCOMbookingByAddingNewAMEXCard -->
+                  <span class="method-name">BCOMbookingByAddingNewAMEXCard</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[starts-with(@id,&apos;viewdetails&apos;)])[1]&quot;}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;BLRDSPRASAD&apos;, ip: &apos;10.201.70.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\sprasad\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51241}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: 127b8755d2eddbac3e0b704df2dfb54a
+*** Element info: {Using=xpath, value=(//a[starts-with(@id,&apos;viewdetails&apos;)])[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy29.click(Unknown Source)
+	at com.hotelhub.powermode.helpers.HotelBookingHelper.chooseHotel(HotelBookingHelper.java:247)
+	at com.hotelhub.powermode.tests.HotelBookingTest.BCOMbookingByAddingNewAMEXCard(HotelBookingTest.java:126)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-PowerMode_by_groups-class-failed -->
+          <div class="suite-PowerMode_by_groups-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.hotelhub.powermode.tests.HotelBookingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="BCOMbookingByAddingNewVISACard">
+                  </a> <!-- BCOMbookingByAddingNewVISACard -->
+                  <span class="method-name">BCOMbookingByAddingNewVISACard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="BCOMbookingWithAutoBookFeature">
+                  </a> <!-- BCOMbookingWithAutoBookFeature -->
+                  <span class="method-name">BCOMbookingWithAutoBookFeature</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="BCOMbookingWithPortraitCard">
+                  </a> <!-- BCOMbookingWithPortraitCard -->
+                  <span class="method-name">BCOMbookingWithPortraitCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="HHEbookingByAddingNewVISACard">
+                  </a> <!-- HHEbookingByAddingNewVISACard -->
+                  <span class="method-name">HHEbookingByAddingNewVISACard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="HHEbookingWithAutoBookFeature">
+                  </a> <!-- HHEbookingWithAutoBookFeature -->
+                  <span class="method-name">HHEbookingWithAutoBookFeature</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="HHEbookingWithPortraitCard">
+                  </a> <!-- HHEbookingWithPortraitCard -->
+                  <span class="method-name">HHEbookingWithPortraitCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-PowerMode_by_groups-class-passed -->
+        </div> <!-- panel PowerMode_by_groups -->
+        <div panel-name="test-xml-PowerMode_by_groups" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\sprasad\AppData\Local\Temp\testng-eclipse--1756606295\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;PowerMode by groups&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;GRP-DailyBooking&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;DailyBooking&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.hotelhub.powermode.tests.HotelBookingTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- GRP-DailyBooking --&gt;
+&lt;/suite&gt; &lt;!-- PowerMode by groups --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-PowerMode_by_groups" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for PowerMode by groups</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">GRP-DailyBooking (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-PowerMode_by_groups" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for PowerMode by groups</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name"></span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">HHEbookingByAddingNewVISACard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">HHEbookingWithAutoBookFeature</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Bcom</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingByAddingNewAMEXCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingByAddingNewVISACard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingWithAutoBookFeature</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">DailyBooking</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingByAddingNewAMEXCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingByAddingNewVISACard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingWithAutoBookFeature</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingWithPortraitCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">HHEbookingByAddingNewVISACard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">HHEbookingWithAutoBookFeature</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">HHEbookingWithPortraitCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">addnewcard</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingByAddingNewAMEXCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingByAddingNewVISACard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">HHEbookingByAddingNewVISACard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-PowerMode_by_groups" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for PowerMode by groups</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_PowerMode_by_groups');
+function tableData_PowerMode_by_groups() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(7);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'BCOMbookingByAddingNewVISACard')
+data.setCell(0, 2, 'com.hotelhub.powermode.tests.HotelBookingTest')
+data.setCell(0, 3, 81709);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'BCOMbookingWithPortraitCard')
+data.setCell(1, 2, 'com.hotelhub.powermode.tests.HotelBookingTest')
+data.setCell(1, 3, 80966);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'BCOMbookingWithAutoBookFeature')
+data.setCell(2, 2, 'com.hotelhub.powermode.tests.HotelBookingTest')
+data.setCell(2, 3, 75136);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'HHEbookingByAddingNewVISACard')
+data.setCell(3, 2, 'com.hotelhub.powermode.tests.HotelBookingTest')
+data.setCell(3, 3, 74536);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'HHEbookingWithPortraitCard')
+data.setCell(4, 2, 'com.hotelhub.powermode.tests.HotelBookingTest')
+data.setCell(4, 3, 74239);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'HHEbookingWithAutoBookFeature')
+data.setCell(5, 2, 'com.hotelhub.powermode.tests.HotelBookingTest')
+data.setCell(5, 3, 69422);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'BCOMbookingByAddingNewAMEXCard')
+data.setCell(6, 2, 'com.hotelhub.powermode.tests.HotelBookingTest')
+data.setCell(6, 3, 47710);
+window.suiteTableData['PowerMode_by_groups']= { tableData: data, tableDiv: 'times-div-PowerMode_by_groups'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 8 minutes</span>
+              <div id="times-div-PowerMode_by_groups">
+              </div> <!-- times-div-PowerMode_by_groups -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-PowerMode_by_groups" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for PowerMode by groups</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-PowerMode_by_groups" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">3 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.hotelhub.powermode.tests.HotelBookingTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginTest</span>
+                <br/>
+                <span class="ignored-method-name">OnRequestBookingFulfillNow</span>
+                <br/>
+                <span class="ignored-method-name">HHEbookingByAddingNewAMEXCard</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-PowerMode_by_groups" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.hotelhub.powermode.tests.HotelBookingTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">instantiateBrowser([TestResult name=BCOMbookingByAddingNewAMEXCard status=FAILURE method=HotelBookingTest.BCOMbookingBy...)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginToTheApplication</span>
+                <span class="method-start">4498 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">BCOMbookingByAddingNewAMEXCard</span>
+                <span class="method-start">7809 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanupBrowser</span>
+                <span class="method-start">55848 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">writeToExcel</span>
+                <span class="method-start">56716 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">instantiateBrowser([TestResult name=BCOMbookingWithAutoBookFeature status=SUCCESS method=HotelBookingTest.BCOMbookingWi...)</span>
+                <span class="method-start">57957 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginToTheApplication</span>
+                <span class="method-start">61547 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">BCOMbookingWithAutoBookFeature</span>
+                <span class="method-start">64347 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanupBrowser</span>
+                <span class="method-start">139487 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">writeToExcel</span>
+                <span class="method-start">140194 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">instantiateBrowser([TestResult name=BCOMbookingByAddingNewVISACard status=SUCCESS method=HotelBookingTest.BCOMbookingBy...)</span>
+                <span class="method-start">140567 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginToTheApplication</span>
+                <span class="method-start">144161 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">BCOMbookingByAddingNewVISACard</span>
+                <span class="method-start">147012 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanupBrowser</span>
+                <span class="method-start">228722 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">writeToExcel</span>
+                <span class="method-start">229416 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">instantiateBrowser([TestResult name=BCOMbookingWithPortraitCard status=SUCCESS method=HotelBookingTest.BCOMbookingWithP...)</span>
+                <span class="method-start">229694 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginToTheApplication</span>
+                <span class="method-start">233975 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">BCOMbookingWithPortraitCard</span>
+                <span class="method-start">236877 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanupBrowser</span>
+                <span class="method-start">317844 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">writeToExcel</span>
+                <span class="method-start">318507 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">instantiateBrowser([TestResult name=HHEbookingWithAutoBookFeature status=SUCCESS method=HotelBookingTest.HHEbookingWith...)</span>
+                <span class="method-start">318815 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginToTheApplication</span>
+                <span class="method-start">322660 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">HHEbookingWithAutoBookFeature</span>
+                <span class="method-start">325592 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanupBrowser</span>
+                <span class="method-start">395015 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">writeToExcel</span>
+                <span class="method-start">395727 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">instantiateBrowser([TestResult name=HHEbookingWithPortraitCard status=SUCCESS method=HotelBookingTest.HHEbookingWithPor...)</span>
+                <span class="method-start">395887 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginToTheApplication</span>
+                <span class="method-start">399502 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">HHEbookingWithPortraitCard</span>
+                <span class="method-start">402593 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanupBrowser</span>
+                <span class="method-start">476833 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">writeToExcel</span>
+                <span class="method-start">477475 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">instantiateBrowser([TestResult name=HHEbookingByAddingNewVISACard status=SUCCESS method=HotelBookingTest.HHEbookingByAd...)</span>
+                <span class="method-start">477677 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginToTheApplication</span>
+                <span class="method-start">481479 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">HHEbookingByAddingNewVISACard</span>
+                <span class="method-start">484332 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanupBrowser</span>
+                <span class="method-start">558869 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">writeToExcel</span>
+                <span class="method-start">559557 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">copyExtent</span>
+                <span class="method-start">559790 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

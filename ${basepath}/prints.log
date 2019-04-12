@@ -1,0 +1,8 @@
+17:47:18.406 [main] INFO  tests.LoginTests - infoL
+17:47:18.410 [main] ERROR tests.LoginTests - mmmm
+17:51:37.267 [main] INFO  tests.LoginTests - infoL
+17:51:37.270 [main] ERROR tests.LoginTests - mmmm
+18:38:04.439 [main] INFO  tests.LoginTests - infoL
+18:38:04.443 [main] ERROR tests.LoginTests - mmmm
+18:42:15.188 [main] INFO  tests.LoginTests - infoL
+18:42:15.192 [main] ERROR tests.LoginTests - mmmm

@@ -1,0 +1,6 @@
+18:52:14.428 [main] INFO  tests.LoginTests - infoL
+18:52:14.432 [main] ERROR tests.LoginTests - mmmm
+06:56:46.742 [main] INFO  tests.LoginTests - infoL
+06:56:46.759 [main] ERROR tests.LoginTests - mmmm
+14:10:14.076 [main] INFO  tests.LoginTests - register link clicked
+14:11:52.612 [main] INFO  tests.LoginTests - register link clicked

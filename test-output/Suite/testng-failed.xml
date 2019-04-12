@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Power Mode Tests(failed)" parallel="methods" preserve-order="true">
+    <classes>
+      <class name="com.hotelhub.powermode.tests.HotelBookingTest">
+        <methods>
+          <include name="cleanupBrowser"/>
+          <include name="loginToTheApplication"/>
+          <include name="copyExtent"/>
+          <include name="BCOMbookingWithAutoBookFeature9"/>
+          <include name="writeToExcel"/>
+          <include name="instantiateBrowser"/>
+          <include name="BCOMbookingWithAutoBookFeature7"/>
+        </methods>
+      </class> <!-- com.hotelhub.powermode.tests.HotelBookingTest -->
+    </classes>
+  </test> <!-- Power Mode Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)" preserve-order="true">
+    <classes>
+      <class name="com.hotelhub.powermode.tests.HotelBookingTest">
+        <methods>
+          <include name="HHEbookingWithAutoBookFeature"/>
+          <include name="loginTest"/>
+          <include name="cleanupBrowser"/>
+          <include name="HHEbookingByAddingNewVISACard"/>
+          <include name="AMADEUSbookingByAddingNewVISACard"/>
+          <include name="OnRequestBookingFulfillNow"/>
+          <include name="instantiateBrowser"/>
+          <include name="BCOMbookingWithAutoBookFeature"/>
+          <include name="AMADEUSbookingWithVISACard"/>
+          <include name="BCOMbookingByAddingNewVISACard"/>
+          <include name="AMADEUSbookingWithAutoBookFeature"/>
+          <include name="BCOMbookingWithPortraitCard"/>
+          <include name="copyExtent"/>
+          <include name="BCOMbookingByAddingNewAMEXCard"/>
+          <include name="writeToExcel"/>
+          <include name="HHEbookingByAddingNewAMEXCard"/>
+          <include name="HHEbookingWithPortraitCard"/>
+        </methods>
+      </class> <!-- com.hotelhub.powermode.tests.HotelBookingTest -->
+      <class name="com.hotelhub.powermode.tests.DevTest">
+        <methods>
+          <include name="cleanupBrowser"/>
+          <include name="BCOMbookingWithVISACard"/>
+          <include name="writeToExcel"/>
+        </methods>
+      </class> <!-- com.hotelhub.powermode.tests.DevTest -->
+      <class name="com.hotelhub.powermode.tests.RegressionTest">
+        <methods>
+          <include name="verificationOfDestinationSearchGoogle"/>
+          <include name="verificationOfPNRReadForApolloGDS"/>
+          <include name="cleanupBrowser"/>
+          <include name="verificationOfDestinationSearchAll"/>
+          <include name="verificationOfBcomRatesDisplay"/>
+          <include name="verificationOfPreviousBookingFilter"/>
+          <include name="verifyUserIsAbleToSelectCheckInCheckOutDates"/>
+          <include name="verificationOfDestinationSearchGoogleAndHotel"/>
+          <include name="verificationOfCustomerSearchBox"/>
+          <include name="verificationOfHHEOnrequestRatesDisplay"/>
+          <include name="verificationOfPNRGDSMismatchError"/>
+          <include name="verificationOfSelectRateFunctionality"/>
+          <include name="verificationOfHotelInformation"/>
+          <include name="verificationOfSabreRatesDisplay"/>
+          <include name="verificationOfDestinationSearchGoogleAndAirport"/>
+          <include name="verificationOfAmadeusRatesDisplay"/>
+          <include name="displayPreviouslySearchedPNRandCustomer"/>
+          <include name="verificationOfCheckInCheckOutDate"/>
+          <include name="writeToExcel"/>
+          <include name="verificationOfDestinationSearchAirport"/>
+          <include name="verificationOfDestinationSearchHotel"/>
+          <include name="verificationOfDestinationSearchAirportAndHotel"/>
+          <include name="verificationOfHHEOnlineRatesDisplay"/>
+        </methods>
+      </class> <!-- com.hotelhub.powermode.tests.RegressionTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
