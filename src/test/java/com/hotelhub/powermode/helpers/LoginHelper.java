@@ -220,7 +220,7 @@ public class LoginHelper extends Base{
     {
     	  String pageSource = driver().getPageSource();
 
-    	  Pattern pattern = Pattern.compile("EchoToken(.*)TravellerDetails");
+    	  Pattern pattern = Pattern.compile("EchoToken(.*)GuaranteeIATA");
     	   Matcher matcher = pattern.matcher(pageSource);
 
     	  if (matcher.find()) {
@@ -232,6 +232,7 @@ public class LoginHelper extends Base{
     	   String result = placeholder.replaceAll("[\\+\\.\\^:,]", "").replace("\"", "");
 
     	   reportingUtils.setEchoToken(result);
+    	   System.out.println("Echo Token "+result);
 
     
 

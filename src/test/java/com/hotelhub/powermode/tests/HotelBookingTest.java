@@ -84,8 +84,8 @@ public class HotelBookingTest extends Base{
 		reportingUtils.setSummary("Verify user is able to create BCOM booking");
 		reportingUtils.setExecutionTime(timeStamp);
 		reportingUtils.setTestCaseName(methodName);
-		SessionId sessionId = driver().getSessionId();
-		System.out.println("Session ID : "+sessionId.toString());
+//		SessionId sessionId = driver().getSessionId();
+//		System.out.println("Session ID : "+sessionId.toString());
 		HotelBookingHelper hotelBookingHelper = new HotelBookingHelper();
 //		hotelBookingHelper.initializeInputData();
 		hotelBookingHelper.enterCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_PNR_SABRE,"");
