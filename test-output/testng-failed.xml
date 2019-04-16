@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hotelhub.powermode.tests.RegressionTest">
+      <class name="com.hotelhub.powermode.tests.HotelBookingTest">
         <methods>
           <include name="cleanupBrowser"/>
+          <include name="BCOMbookingByAddingNewVISACard"/>
           <include name="loginToTheApplication"/>
           <include name="copyExtent"/>
           <include name="writeToExcel"/>
-          <include name="verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesAmadeusPNR"/>
           <include name="instantiateBrowser"/>
         </methods>
-      </class> <!-- com.hotelhub.powermode.tests.RegressionTest -->
+      </class> <!-- com.hotelhub.powermode.tests.HotelBookingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

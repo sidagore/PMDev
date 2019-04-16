@@ -47,7 +47,7 @@ public class LoginHelper extends Base{
 			Url=props.getProperty("PowerModeDev5051");
 			break;
 		default:
-			Url=props.getProperty("PowerMode");
+			Url=props.getProperty("PowerModeAlpha");
 			break;
 		}
 		
