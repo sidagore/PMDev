@@ -54,6 +54,7 @@ public class LoginHelper extends Base{
 		String UserName=props.getProperty("UserName");
 		String PassWord=props.getProperty("PassWord");
 		driver().get(Url);
+		System.out.println("Environment"+Url);
 		LoginPage loginPage = new LoginPage();
 		HomePage homePage = new HomePage();
 		loginPage.userName.sendKeys(UserName);
