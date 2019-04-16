@@ -250,7 +250,7 @@ public class HotelBookingHelper extends Base {
 //			chooseHotelPage.AGGREGATOR_LINK.click();
 			
 			wait.until(ExpectedConditions.visibilityOf(chooseHotelPage.VIEW_ALL_RATES_AGGREGATOR));
-			
+			Thread.sleep(2000);
 			chooseHotelPage.VIEW_ALL_RATES_AGGREGATOR.click();
 			Thread.sleep(2000);
 			if(BookingFlow.toLowerCase().equals("auto book"))
