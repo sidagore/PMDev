@@ -42,7 +42,7 @@ public class HotelBookingTest extends Base{
 		System.out.println("Login Successfull");
 	}
 	
-	@Test(groups={"DailyBooking"},priority=2)
+	@Test(groups={"DailyBooking"} ,priority=2)
 	void BCOMbookingWithPortraitCard() throws Throwable
 	{
 		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();
@@ -74,7 +74,7 @@ public class HotelBookingTest extends Base{
 
 	
 	
-	@Test(groups={"DailyBooking","addnewcard","Bcom"},priority=2,enabled=true)
+	@Test(groups={"DailyBooking1","addnewcard","Bcom"},priority=2,enabled=true)
 	void BCOMbookingByAddingNewVISACard() throws Throwable
 	{
 		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();

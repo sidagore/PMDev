@@ -280,7 +280,7 @@ public class RegressionHelper extends Base {
 //		12-May-2019/13-May-2019
 		
 		System.out.println("Check In Check Out "+CheckInCheckOut);
-		
+		Thread.sleep(2000);
 		String CheckIn = CheckInCheckOut.substring(0, CheckInCheckOut.indexOf("/"));
 		String CheckOut = CheckInCheckOut.substring(CheckIn.length()+1);
 		
@@ -755,7 +755,7 @@ public class RegressionHelper extends Base {
 		
 		if(Param.toLowerCase().equals("bcom"))
 		{
-			
+			Thread.sleep(2000);
 			chooseHotelPage.AGGREGATOR_LINK.click();
 			js.executeScript("window.scrollBy(0,300)");
 			js.executeScript("window.scrollBy(0,200)");

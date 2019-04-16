@@ -15,6 +15,7 @@ public class PowerModeConstants {
 	public static final String TEST_CUSTOMER="VERNON PH MR  BEAR";
 	public static final String TEST_CUSTOMER_CLIENT_RATE_AMADEUS= "14:D5269";
 	public static final String TEST_CUSTOMER_CLIENT_RATE_HHE_ONREQUEST= "14:28C1D5";
+	public static final String TEST_CUSTOMER_AMADEUS_UK="A:44CC5";
 	public static final String GDS_PNR_MISMATCH_ERROR="The PNR provided cannot be retrieved. Please correct the PNR reference or change the GDS";
 
 	public static final String ON_REQUEST_BOOKING_TEST_HOTEL = "TCT Test Hotel";

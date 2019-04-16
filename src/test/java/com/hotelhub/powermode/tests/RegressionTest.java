@@ -686,4 +686,26 @@ public class RegressionTest extends Base{
 		reportingUtils.setTestResult("PASS");
 	}
 	
+	@Test
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesAmadeusPNR() throws Throwable
+	{
+		new Object(){}.getClass().getEnclosingMethod().getName();
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		
+		reportingUtils.setTestCaseNumber("TC07");
+		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setExecutionTime(timeStamp);
+		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
+		
+		RegressionHelper regressionHelper = new RegressionHelper();
+//		hotelBookingHelper.initializeInputData();
+		regressionHelper.clickOnBookAHotel();
+		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_AMADEUS_UK,"");
+		regressionHelper.searchLocation(PowerModeConstants.HHE_BOOKING_TEST_HOTEL);
+		regressionHelper.selectLocation("");
+		regressionHelper.selectCheckInCheckOutDate();
+		Thread.sleep(5000);
+	}
+	
 }

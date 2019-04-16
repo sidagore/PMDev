@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [PowerMode by groups]">
-  <test thread-count="5" name="GRP-DailyBooking(failed)">
-    <groups>
-      <run>
-        <include name="DailyBooking"/>
-      </run>
-    </groups>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hotelhub.powermode.tests.HotelBookingTest">
+      <class name="com.hotelhub.powermode.tests.RegressionTest">
         <methods>
           <include name="cleanupBrowser"/>
           <include name="loginToTheApplication"/>
           <include name="copyExtent"/>
-          <include name="BCOMbookingByAddingNewAMEXCard"/>
           <include name="writeToExcel"/>
+          <include name="verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesAmadeusPNR"/>
           <include name="instantiateBrowser"/>
         </methods>
-      </class> <!-- com.hotelhub.powermode.tests.HotelBookingTest -->
+      </class> <!-- com.hotelhub.powermode.tests.RegressionTest -->
     </classes>
-  </test> <!-- GRP-DailyBooking(failed) -->
-</suite> <!-- Failed suite [PowerMode by groups] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
