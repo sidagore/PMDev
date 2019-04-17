@@ -702,10 +702,85 @@ public class RegressionTest extends Base{
 //		hotelBookingHelper.initializeInputData();
 		regressionHelper.clickOnBookAHotel();
 		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_AMADEUS_UK,"");
-		regressionHelper.searchLocation(PowerModeConstants.HHE_BOOKING_TEST_HOTEL);
+		regressionHelper.searchLocation(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
+		regressionHelper.selectLocation("");
+//		regressionHelper.selectCheckInCheckOutDate();
+		regressionHelper.clickOnSearchHotelsButton();
+		regressionHelper.chooseHotel("BCOM","");
+		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_AMADEUS_UK);
+		Thread.sleep(5000);
+	}
+	@Test
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesAmadeusPNR() throws Throwable
+	{
+		new Object(){}.getClass().getEnclosingMethod().getName();
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		
+		reportingUtils.setTestCaseNumber("TC07");
+		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setExecutionTime(timeStamp);
+		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
+		
+		RegressionHelper regressionHelper = new RegressionHelper();
+//		hotelBookingHelper.initializeInputData();
+		regressionHelper.clickOnBookAHotel();
+		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_AMADEUS_UK,"");
+		regressionHelper.searchLocation(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
 		regressionHelper.selectLocation("");
 		regressionHelper.selectCheckInCheckOutDate();
+		regressionHelper.clickOnSearchHotelsButton();
+		regressionHelper.chooseHotel("ONREQUEST","");
+		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_AMADEUS_UK);
 		Thread.sleep(5000);
 	}
 	
+	@Test
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesSabrePNR() throws Throwable
+	{
+		new Object(){}.getClass().getEnclosingMethod().getName();
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		
+		reportingUtils.setTestCaseNumber("TC07");
+		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setExecutionTime(timeStamp);
+		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
+		
+		RegressionHelper regressionHelper = new RegressionHelper();
+//		hotelBookingHelper.initializeInputData();
+		regressionHelper.clickOnBookAHotel();
+		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_SABRE_UK,"");
+		regressionHelper.searchLocation(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
+		regressionHelper.selectLocation("");
+		regressionHelper.selectCheckInCheckOutDate();
+		regressionHelper.clickOnSearchHotelsButton();
+		regressionHelper.chooseHotel("BCOM","");
+		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_SABRE_UK);
+		Thread.sleep(5000);
+	}
+	@Test
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesSabrePNR() throws Throwable
+	{
+		new Object(){}.getClass().getEnclosingMethod().getName();
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		
+		reportingUtils.setTestCaseNumber("TC07");
+		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setExecutionTime(timeStamp);
+		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
+		
+		RegressionHelper regressionHelper = new RegressionHelper();
+//		hotelBookingHelper.initializeInputData();
+		regressionHelper.clickOnBookAHotel();
+		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_SABRE_UK,"");
+		regressionHelper.searchLocation(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
+		regressionHelper.selectLocation("");
+		regressionHelper.selectCheckInCheckOutDate();
+		regressionHelper.clickOnSearchHotelsButton();
+		regressionHelper.chooseHotel("ONREQUEST","");
+		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_SABRE_UK);
+		Thread.sleep(5000);
+	}
 }

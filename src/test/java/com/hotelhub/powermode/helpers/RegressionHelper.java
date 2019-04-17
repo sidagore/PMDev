@@ -35,7 +35,8 @@ public class RegressionHelper extends Base {
 	public static String Hotel;
 	WebDriverWait wait=new WebDriverWait(driver(), 50);
 	JavascriptExecutor js = (JavascriptExecutor) driver();
-	
+	public static String BookingType;
+	public static String BookingFlow;
 	public void clickOnBookAHotel()
 	{
 		_logger.info("Click on Book a Hotel button");
@@ -221,6 +222,7 @@ public class RegressionHelper extends Base {
 		SearchHotelStep1Page searchHotelStep1Page = new SearchHotelStep1Page();
 		if(LocationType.isEmpty())
 		{
+			Thread.sleep(5000);
 			searchHotelStep1Page.FIRST_RESULT.click();
 		}
 		else if(LocationType.contains("Google"))
@@ -330,6 +332,7 @@ public class RegressionHelper extends Base {
 		}
 			
 	}
+	
 	
 	public void verifySearchResultsAreDisplayed(ExtentTest test) throws InterruptedException
 	{
@@ -773,28 +776,44 @@ public class RegressionHelper extends Base {
 	{
 		test.log(LogStatus.INFO, "<b style='color:#3b3f42;Font-size:12px;font-family: verdana'>"+ "Choose the hotel" + "<b>");
 		ChooseHotelPage chooseHotelPage = new ChooseHotelPage();
-		BookHotelPage bookHotelPage = new BookHotelPage();
+		this.BookingType =BookingType;
+		this.BookingFlow=BookingFlow;
+		try
+		{
+			Thread.sleep(5000);
+			driver().findElement(By.xpath("//button[contains(text(),'Get rates')]")).click();
+		}
+		catch(Exception e)
+		{
+			
+		}
+			
+		
+		
 		if(BookingType.equals("BCOM"))
 		{
+			Thread.sleep(2000);
+			chooseHotelPage.VIEW_DETAILS.click();
+			Thread.sleep(1000);
+			chooseHotelPage.VIEW_DETAILS.click();
 //			chooseHotelPage.AGGREGATOR_LINK.click();
 			
 			wait.until(ExpectedConditions.visibilityOf(chooseHotelPage.VIEW_ALL_RATES_AGGREGATOR));
-			Thread.sleep(5000);
-			chooseHotelPage.VIEW_ALL_RATES_AGGREGATOR.click();
-			
-			
-			chooseHotelPage.VIEW_DETAILS.click();
 			Thread.sleep(2000);
-			chooseHotelPage.VIEW_DETAILS.click();
-			
-			
+			chooseHotelPage.VIEW_ALL_RATES_AGGREGATOR.click();
+			Thread.sleep(2000);
 			if(BookingFlow.toLowerCase().equals("auto book"))
 			{
 				
 				chooseHotelPage.AUTO_BOOK_FIRST_BCOM_CANCELLABLE.click();
 			}
 			else
-			chooseHotelPage.SELECT_RATE_FIRST_BCOM_CANCELLABLE.click();
+			{
+				Thread.sleep(2000);
+				chooseHotelPage.SELECT_RATE_FIRST_BCOM_CANCELLABLE.click();
+			}
+
+			
 			
 		}
 	
@@ -803,57 +822,85 @@ public class RegressionHelper extends Base {
 			String xpath="//span[contains(text(),\"_hotelName\")]";
 			String xpath_replace=xpath.replaceAll("_hotelName", Hotel);
 			Thread.sleep(5000);
-			driver().findElement(By.xpath(xpath_replace)).click();
+//			driver().findElement(By.xpath(xpath_replace)).click();
 			chooseHotelPage.ROOM_IT_RATES_LINK.click();
-			chooseHotelPage.VIEW_ALL_RATES_ROOMIT.click();
-			if(BookingFlow.toLowerCase().equals("auto book"))
-			{
-				chooseHotelPage.AUTO_BOOK_FIRST_BCOM_CANCELLABLE.click();
-			}
-			else
-			chooseHotelPage.SELECT_RATE_FIRST_ONLINE_CANCELLABLE.click();	
-		}
-		
-		
-		if(BookingType.equals("SABRE"))
-		{
-			String xpath="//span[contains(text(),\"_hotelName\")]";
-			String xpath_replace=xpath.replaceAll("_hotelName", Hotel);
 			Thread.sleep(5000);
-			driver().findElement(By.xpath(xpath_replace)).click();
-			chooseHotelPage.ROOM_IT_RATES_LINK.click();
 			chooseHotelPage.VIEW_ALL_RATES_ROOMIT.click();
 			if(BookingFlow.toLowerCase().equals("auto book"))
 			{
+				
 				chooseHotelPage.AUTO_BOOK_FIRST_BCOM_CANCELLABLE.click();
 			}
 			else
 			chooseHotelPage.SELECT_RATE_FIRST_ONLINE_CANCELLABLE.click();	
 		}
 		
+
+		
+		if(BookingType.equals("AMADEUS"))
+		{
+//			chooseHotelPage.PUBLIC_RATES_LINK.click();
+//			chooseHotelPage.ROOM_IT_RATES_LINK.click();
+			wait.until(ExpectedConditions.visibilityOf(chooseHotelPage.VIEW_ALL_RATES_PUBLIC));
+			chooseHotelPage.VIEW_ALL_RATES_PUBLIC.click();
+			if(BookingFlow.toLowerCase().equals("auto book"))
+			{
+				
+				chooseHotelPage.AUTO_BOOK_FIRST_ONLINE_CANCELLABLE.click();
+			}
+			else
+			chooseHotelPage.SELECT_RATE_FIRST_ONLINE_CANCELLABLE.click();
+			
+		}
+		
+
 		if(BookingType.equals("HHE"))
 		{
 			
-			chooseHotelPage.PUBLIC_RATES_LINK.click();
+//			chooseHotelPage.PUBLIC_RATES_LINK.click();
 			wait.until(ExpectedConditions.visibilityOf(chooseHotelPage.VIEW_ALL_RATES_PUBLIC));
 			chooseHotelPage.VIEW_ALL_RATES_PUBLIC.click();
+
 			if(BookingFlow.toLowerCase().equals("auto book"))
 			{
 				
 				chooseHotelPage.AUTO_BOOK_FIRST_HHE_CANCELLABLE.click();
 			}
 			else
+
 			chooseHotelPage.SELECT_RATE_FIRST_HHE_CANCELLABLE.click();	
 		}
 		
+		if(BookingType.equals("ONREQUEST"))
+		{
+			wait.until(ExpectedConditions.visibilityOf(chooseHotelPage.ONREQUEST_BUTTTON));
+			Thread.sleep(1000);
+			chooseHotelPage.ONREQUEST_BUTTTON.click();
+		}
 	
 	
 		ScreenShot("Hotel Selection Successful", "INFO", test);
-		wait.until(ExpectedConditions.visibilityOf(bookHotelPage.NOTIFICATION_EMAIL_INPUT));
-		
+		chooseOtherRoom();
 	}
 	
-	
+	public void chooseOtherRoom() throws InterruptedException
+	{
+		SearchHotelStep1Page searchHotelStep1Page = new SearchHotelStep1Page();
+		ChooseHotelPage chooseHotelPage = new ChooseHotelPage();
+		if(driver().findElements(chooseHotelPage.NO_ROOM_RATES_BY()).size()>=1)
+		{
+			Thread.sleep(5000);
+			JavascriptExecutor js = (JavascriptExecutor) driver();
+			js.executeScript("window.scrollBy(0,-500)");
+			searchHotelStep1Page.CHECKIN_CHECKOUT_DATE_HEADER.click();
+			Thread.sleep(5000);
+			searchHotelStep1Page.CHECKIN_DATE_HEADER_NEXT_DAY.click();
+			searchHotelStep1Page.CHECKIN_CHECKOUT_DATE_HEADER_NEXT_DAY.click();
+			Thread.sleep(2000);
+			searchHotelStep1Page.CHECKIN_CHECKOUT_DATE_HEADER_PROCEED.click();
+			chooseHotel(BookingType,BookingFlow);
+		}
+	}
 	
 	public void addNewCard() throws InterruptedException
 	{
@@ -896,6 +943,31 @@ public class RegressionHelper extends Base {
 		bookHotelPage.INTERNAL_REMARKS.sendKeys("This is test booking, please cancel");
 		ScreenShot("Booking details input successful", "INFO", test);
 	
+	}
+	
+	public void extractTraveller(String PNR)
+	{
+		BookHotelPage bookHotelPage = new BookHotelPage();
+		bookHotelPage.EXTRACT_TRAVELLER_INPUT.sendKeys(PNR);
+		bookHotelPage.EXTRACT_TRAVELLER_DETAILS.click();
+	}
+	
+	public void verifyExtractTravellerInformationInStep2(String PNR) throws InterruptedException
+	{
+		BookHotelPage bookHotelPage = new BookHotelPage();
+		extractTraveller(PNR);
+		ScreenShot("Extract traveller information", "PASS", test);
+		String firstName=bookHotelPage.TRAVELLER_FIRST_NAME.getAttribute("value");
+		String lastName=bookHotelPage.TRAVELLER_LAST_NAME.getAttribute("value");
+//		String telephone=bookHotelPage.TRAVELLER_TELEPHONE.getAttribute("value");
+//		String email=bookHotelPage.NOTIFICATION_EMAIL_INPUT.getAttribute("value");
+		String pnr=bookHotelPage.PNR_INPUT.getAttribute("value");
+		System.out.println(firstName +" "+lastName);
+		Assert.assertTrue(!firstName.isEmpty());
+		Assert.assertTrue(!lastName.isEmpty());
+//		Assert.assertTrue(!telephone.isEmpty());
+//		Assert.assertTrue(!email.isEmpty());
+		Assert.assertTrue(!pnr.isEmpty());
 	}
 	
 	public void clickOnBookButton() throws InterruptedException

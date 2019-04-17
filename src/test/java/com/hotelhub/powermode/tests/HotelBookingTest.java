@@ -90,7 +90,7 @@ public class HotelBookingTest extends Base{
 //		hotelBookingHelper.initializeInputData();
 		hotelBookingHelper.enterCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_PNR_SABRE,"");
 		hotelBookingHelper.searcHotel(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
-//		hotelBookingHelper.selectCheckInCheckOutDate();
+		hotelBookingHelper.selectCheckInCheckOutDate();
 		hotelBookingHelper.clickOnSearchHotels();
 		hotelBookingHelper.chooseHotel("BCOM","");
 		hotelBookingHelper.addNewCard(PowerModeConstants.PAYMENT_CARD_VISA);

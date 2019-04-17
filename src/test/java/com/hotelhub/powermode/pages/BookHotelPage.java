@@ -155,4 +155,16 @@ public class BookHotelPage extends Base {
 		return byObj;
 	}
 	
+	@FindBy(id="1_FirstName")
+	public WebElement TRAVELLER_FIRST_NAME;
+	
+	@FindBy(id="1_LastName")
+	public WebElement TRAVELLER_LAST_NAME;
+	
+	@FindBy(id="1_Phone1")
+	public WebElement TRAVELLER_TELEPHONE;
+	
+	@FindBy(id="txtPNR")
+	public WebElement PNR_INPUT;
+	
 }

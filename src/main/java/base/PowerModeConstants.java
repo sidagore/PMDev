@@ -1,21 +1,26 @@
 package base;
 
 public class PowerModeConstants {
-
-
+	
+	
 //	public static final String TEST_PNR_SABRE = "ANEAFN";
 	public static final String TEST_PNR_AMADEUS1 = "U576DU";
 	public static final String TEST_PNR_AMADEUS = "O3OEWG";
+	public static final String TEST_PNR_AMADEUS_UK = "SM9FJ6";
 //	public static final String TEST_PNR_SABRE = "DHLSUE";
+	public static final String TEST_PNR_SABRE_UK = "MBYDWG";
 	public static final String TEST_PNR_SABRE = "OPLWZW";
 //	public static final String TEST_PNR_AMADEUS = "NJ3QPL";
 	public static final String TEST_PNR_GALILEO = "6HSP1A";
-	public static final String TEST_PNR_APOLLO = "QJC7PN";	
+	public static final String TEST_PNR_APOLLO = "QJC7PN";
+	
 	public static final String HHE_ON_REQUEST_TEST_PNR="NY7Q8N";
+	
 	public static final String TEST_CUSTOMER="VERNON PH MR  BEAR";
 	public static final String TEST_CUSTOMER_CLIENT_RATE_AMADEUS= "14:D5269";
 	public static final String TEST_CUSTOMER_CLIENT_RATE_HHE_ONREQUEST= "14:28C1D5";
 	public static final String TEST_CUSTOMER_AMADEUS_UK="A:44CC5";
+	public static final String TEST_CUSTOMER_SABRE_UK="UK-Fircroft IMA";
 	public static final String GDS_PNR_MISMATCH_ERROR="The PNR provided cannot be retrieved. Please correct the PNR reference or change the GDS";
 
 	public static final String ON_REQUEST_BOOKING_TEST_HOTEL = "TCT Test Hotel";
