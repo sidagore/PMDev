@@ -945,30 +945,38 @@ public class RegressionHelper extends Base {
 	
 	}
 	
-	public void extractTraveller(String PNR)
+	public void extractTraveller(String PNR) throws InterruptedException
 	{
 		BookHotelPage bookHotelPage = new BookHotelPage();
 		bookHotelPage.EXTRACT_TRAVELLER_INPUT.sendKeys(PNR);
+		Thread.sleep(2000);
 		bookHotelPage.EXTRACT_TRAVELLER_DETAILS.click();
 	}
 	
-	public void verifyExtractTravellerInformationInStep2(String PNR) throws InterruptedException
+	public void verifyExtractTravellerInformationInStep2(String PNR,String CardAssociation) throws InterruptedException
 	{
 		BookHotelPage bookHotelPage = new BookHotelPage();
 		extractTraveller(PNR);
 		ScreenShot("Extract traveller information", "PASS", test);
 		String firstName=bookHotelPage.TRAVELLER_FIRST_NAME.getAttribute("value");
 		String lastName=bookHotelPage.TRAVELLER_LAST_NAME.getAttribute("value");
-//		String telephone=bookHotelPage.TRAVELLER_TELEPHONE.getAttribute("value");
-//		String email=bookHotelPage.NOTIFICATION_EMAIL_INPUT.getAttribute("value");
 		String pnr=bookHotelPage.PNR_INPUT.getAttribute("value");
 		System.out.println(firstName +" "+lastName);
 		Assert.assertTrue(!firstName.isEmpty());
 		Assert.assertTrue(!lastName.isEmpty());
-//		Assert.assertTrue(!telephone.isEmpty());
-//		Assert.assertTrue(!email.isEmpty());
 		Assert.assertTrue(!pnr.isEmpty());
+		Thread.sleep(15000);
+		if(CardAssociation.contains("Yes"))
+		{
+			Assert.assertTrue(bookHotelPage.PAYMENT_TYPE_DROPDOWN_SELECTED.isDisplayed());
+		}
+		else if(CardAssociation.contains("No"))
+		{
+			Assert.assertTrue(bookHotelPage.PAYMENT_TYPE_DROPDOWN_UNSELECTED.isDisplayed());
+		}
 	}
+	
+	
 	
 	public void clickOnBookButton() throws InterruptedException
 	{

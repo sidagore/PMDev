@@ -6,7 +6,7 @@
       <class name="com.hotelhub.powermode.tests.RegressionTest">
         <methods>
           <include name="cleanupBrowser"/>
-          <include name="verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesSabrePNR"/>
+          <include name="verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesWhenPNRisNotAssociatedWithPaymentCard"/>
           <include name="loginToTheApplication"/>
           <include name="copyExtent"/>
           <include name="writeToExcel"/>

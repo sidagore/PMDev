@@ -9,6 +9,8 @@ public class PowerModeConstants {
 	public static final String TEST_PNR_AMADEUS_UK = "SM9FJ6";
 //	public static final String TEST_PNR_SABRE = "DHLSUE";
 	public static final String TEST_PNR_SABRE_UK = "MBYDWG";
+	public static final String TEST_PNR_SABRE_UK_PAYMENT_CARD_NOT_ASSOCIATED = "MBYDWG";
+	public static final String TEST_PNR_AMADEUS_UK_PAYMENT_CARD_ASSOCIATED = "QGN9XT";
 	public static final String TEST_PNR_SABRE = "OPLWZW";
 //	public static final String TEST_PNR_AMADEUS = "NJ3QPL";
 	public static final String TEST_PNR_GALILEO = "6HSP1A";

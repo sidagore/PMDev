@@ -38,6 +38,14 @@ public class BookHotelPage extends Base {
 		By byObj = By.xpath("//div/label[contains(text(),'Card type')]/../select");
 		return byObj;
 	}
+	@FindBy(id="1_PaymentTypes")
+	public WebElement PAYMENT_TYPE_DROPDOWN;
+	
+	@FindBy(xpath="//select[(@id='1_PaymentTypes') and (@class='form-control mandatory pass')]")
+	public WebElement PAYMENT_TYPE_DROPDOWN_SELECTED;
+	
+	@FindBy(xpath="//select[(@id='1_PaymentTypes') and (@class='form-control mandatory')]")
+	public WebElement PAYMENT_TYPE_DROPDOWN_UNSELECTED;
 	
 	@FindBy(xpath="//div/label[contains(text(),'Card type')]/../select")
 	public WebElement CARD_TYPE_DROPDOWN;
