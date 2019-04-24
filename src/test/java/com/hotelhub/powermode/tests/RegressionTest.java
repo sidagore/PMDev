@@ -497,33 +497,7 @@ public class RegressionTest extends Base{
 	}
 	
 	
-	@Test(priority=9,groups={""})
-	public void verificationOfHotelInformation() throws Throwable
-	{
-		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
-		
-		reportingUtils.setTestCaseNumber("TC05");
-		reportingUtils.setSummary("Verification of Hotel information");
-		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName(methodName);
-		
-		RegressionHelper regressionHelper = new RegressionHelper();
-//		hotelBookingHelper.initializeInputData();
-		regressionHelper.clickOnBookAHotel();
-		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_CLIENT_RATE_HHE_ONREQUEST,"");
-		Thread.sleep(1000);
-		
-		regressionHelper.searchLocation(PowerModeConstants.HOTEL_INFORMATION_TEST_HOTEL_ONLINE);
-		regressionHelper.selectLocation("");
-//		regressionHelper.selectCheckInCheckOutDateFixed();
-		regressionHelper.clickOnSearchHotelsButton();
-//		regressionHelper.clickGetRates();
-		regressionHelper.verifyhotelInformation();
-//		regressionHelper.logOut(test);
-		reportingUtils.setTestResult("PASS");
-		
-	}
+	
 	
 	@Test(priority=4,groups={""})
 	public void verificationOfPreviousBookingFilter() throws Throwable
@@ -686,16 +660,16 @@ public class RegressionTest extends Base{
 		reportingUtils.setTestResult("PASS");
 	}
 	
-	@Test
+	@Test(groups="demo")
 	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesAmadeusPNR() throws Throwable
 	{
 		new Object(){}.getClass().getEnclosingMethod().getName();
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		
 		reportingUtils.setTestCaseNumber("TC07");
-		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
 		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 Online rates Amadeus PNR");
 		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
@@ -708,18 +682,18 @@ public class RegressionTest extends Base{
 		regressionHelper.clickOnSearchHotelsButton();
 		regressionHelper.chooseHotel("BCOM","");
 		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_AMADEUS_UK,"");
-		Thread.sleep(5000);
+		
 	}
-	@Test
+	@Test(groups="demo")
 	public void verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesAmadeusPNR() throws Throwable
 	{
 		new Object(){}.getClass().getEnclosingMethod().getName();
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		
 		reportingUtils.setTestCaseNumber("TC07");
-		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
 		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 On-request rates Amadeus PNR");
 		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
@@ -732,43 +706,45 @@ public class RegressionTest extends Base{
 		regressionHelper.clickOnSearchHotelsButton();
 		regressionHelper.chooseHotel("ONREQUEST","");
 		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_AMADEUS_UK,"");
-		Thread.sleep(5000);
+		
 	}
 	
+	
+	
 	@Test
-	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesSabrePNR() throws Throwable
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesGalileoPNR() throws Throwable
 	{
 		new Object(){}.getClass().getEnclosingMethod().getName();
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		
 		reportingUtils.setTestCaseNumber("TC07");
-		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
 		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 Online rates Galileo PNR");
 		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
 //		hotelBookingHelper.initializeInputData();
 		regressionHelper.clickOnBookAHotel();
-		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_SABRE_UK,"");
+		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_GALILEO_IN,"");
 		regressionHelper.searchLocation(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
 		regressionHelper.selectLocation("");
 		regressionHelper.selectCheckInCheckOutDate();
 		regressionHelper.clickOnSearchHotelsButton();
 		regressionHelper.chooseHotel("BCOM","");
-		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_SABRE_UK,"");
-		Thread.sleep(5000);
+		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_GALILEO_IN,"");
 	}
+	
 	@Test
-	public void verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesSabrePNR() throws Throwable
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesGalileoPNR() throws Throwable
 	{
 		new Object(){}.getClass().getEnclosingMethod().getName();
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		
 		reportingUtils.setTestCaseNumber("TC07");
-		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
 		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 On-request rates Galileo PNR");
 		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
@@ -781,10 +757,8 @@ public class RegressionTest extends Base{
 		regressionHelper.clickOnSearchHotelsButton();
 		regressionHelper.chooseHotel("ONREQUEST","");
 		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_SABRE_UK,"");
-		Thread.sleep(5000);
+	
 	}
-	
-	
 	@Test
 	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesWhenPNRisAssociatedWithPaymentCard() throws Throwable
 	{
@@ -792,9 +766,9 @@ public class RegressionTest extends Base{
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		
 		reportingUtils.setTestCaseNumber("TC07");
-		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
 		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 Online rates when PNR is associated with payment card");
 		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
@@ -817,9 +791,9 @@ public class RegressionTest extends Base{
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		
 		reportingUtils.setTestCaseNumber("TC07");
-		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
 		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 on-request rated when PNR is associated with payment card");
 		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
@@ -834,17 +808,45 @@ public class RegressionTest extends Base{
 		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_AMADEUS_UK,"Yes");
 		
 	}
+	@Test(priority=9,groups={"demo"})
+	public void verificationOfHotelInformation() throws Throwable
+	{
+		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		
+		reportingUtils.setTestCaseNumber("TC05");
+		reportingUtils.setSummary("Verification of Hotel information");
+		reportingUtils.setExecutionTime(timeStamp);
+		reportingUtils.setTestCaseName(methodName);
+		
+		RegressionHelper regressionHelper = new RegressionHelper();
+//		hotelBookingHelper.initializeInputData();
+		regressionHelper.clickOnBookAHotel();
+		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_CLIENT_RATE_HHE_ONREQUEST,"");
+		Thread.sleep(1000);
+		
+		regressionHelper.searchLocation(PowerModeConstants.HOTEL_INFORMATION_TEST_HOTEL_ONLINE);
+		regressionHelper.selectLocation("");
+//		regressionHelper.selectCheckInCheckOutDateFixed();
+		regressionHelper.clickOnSearchHotelsButton();
+		regressionHelper.clickGetRates();
+		regressionHelper.verifyhotelInformation();
+//		regressionHelper.logOut(test);
+		reportingUtils.setTestResult("PASS");
+		
+	}
 	
-	@Test
-	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesWhenPNRisNotAssociatedWithPaymentCard() throws Throwable
+	
+	@Test(groups="demo")
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesSabrePNR() throws Throwable
 	{
 		new Object(){}.getClass().getEnclosingMethod().getName();
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		
 		reportingUtils.setTestCaseNumber("TC07");
-		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
 		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 Online Rates Sabre PNR");
 		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
@@ -856,8 +858,56 @@ public class RegressionTest extends Base{
 		regressionHelper.selectCheckInCheckOutDate();
 		regressionHelper.clickOnSearchHotelsButton();
 		regressionHelper.chooseHotel("BCOM","");
+		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_SABRE_UK,"");
+		
+	}
+	@Test(groups="demo")
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesSabrePNR() throws Throwable
+	{
+		new Object(){}.getClass().getEnclosingMethod().getName();
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		
+		reportingUtils.setTestCaseNumber("TC07");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
+		reportingUtils.setExecutionTime(timeStamp);
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 On-Request rates Sabre PNR");
+		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
+		
+		RegressionHelper regressionHelper = new RegressionHelper();
+//		hotelBookingHelper.initializeInputData();
+		regressionHelper.clickOnBookAHotel();
+		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_SABRE_UK,"");
+		regressionHelper.searchLocation(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
+		regressionHelper.selectLocation("");
+		regressionHelper.selectCheckInCheckOutDate();
+		regressionHelper.clickOnSearchHotelsButton();
+		regressionHelper.chooseHotel("ONREQUEST","");
+		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_SABRE_UK,"");
+		
+	}
+	@Test(groups="demo")
+	public void verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesWhenPNRisNotAssociatedWithPaymentCard() throws Throwable
+	{
+		new Object(){}.getClass().getEnclosingMethod().getName();
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+		
+		reportingUtils.setTestCaseNumber("TC07");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
+		reportingUtils.setExecutionTime(timeStamp);
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 Online rates when PNR is not associated with payment card");
+		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
+		
+		RegressionHelper regressionHelper = new RegressionHelper();
+//		hotelBookingHelper.initializeInputData();
+		regressionHelper.clickOnBookAHotel();
+		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_SABRE_UK,"");
+		regressionHelper.searchLocation(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
+		regressionHelper.selectLocation("");
+//		regressionHelper.selectCheckInCheckOutDate();
+		regressionHelper.clickOnSearchHotelsButton();
+		regressionHelper.chooseHotel("BCOM","");
 		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_SABRE_UK_PAYMENT_CARD_NOT_ASSOCIATED,"No");
-		Thread.sleep(5000);
+		
 	}
 	
 	@Test
@@ -867,9 +917,9 @@ public class RegressionTest extends Base{
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 		
 		reportingUtils.setTestCaseNumber("TC07");
-		reportingUtils.setSummary("PNR Read functionality");
+		reportingUtils.setSummary("Verification of use traveller details from PNR on Step3");
 		reportingUtils.setExecutionTime(timeStamp);
-		reportingUtils.setTestCaseName("Verify user is able to Read GALILEO PNR");
+		reportingUtils.setTestCaseName("Verification of use traveller details from PNR on Step3 on-request rates when PNR is not associated with payment card");
 		reportingUtils.setInputData(PowerModeConstants.TEST_PNR_GALILEO);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
@@ -882,7 +932,7 @@ public class RegressionTest extends Base{
 		regressionHelper.clickOnSearchHotelsButton();
 		regressionHelper.chooseHotel("ONREQUEST","");
 		regressionHelper.verifyExtractTravellerInformationInStep2(PowerModeConstants.TEST_PNR_AMADEUS_UK,"");
-		Thread.sleep(5000);
+		
 	}
 	
 }

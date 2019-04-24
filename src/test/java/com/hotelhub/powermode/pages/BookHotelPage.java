@@ -47,6 +47,9 @@ public class BookHotelPage extends Base {
 	@FindBy(xpath="//select[(@id='1_PaymentTypes') and (@class='form-control mandatory')]")
 	public WebElement PAYMENT_TYPE_DROPDOWN_UNSELECTED;
 	
+	@FindBy(xpath="//select[@id='1_PaymentTypes']/option[@selected='selected' and text()='Add a new card']")
+	public WebElement PAYMENT_TYPE_ADD_NEW_CARD;
+	
 	@FindBy(xpath="//div/label[contains(text(),'Card type')]/../select")
 	public WebElement CARD_TYPE_DROPDOWN;
 	

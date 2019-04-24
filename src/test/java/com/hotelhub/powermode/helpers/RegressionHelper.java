@@ -1,5 +1,6 @@
 package com.hotelhub.powermode.helpers;
 
+import java.awt.Window;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -144,7 +145,6 @@ public class RegressionHelper extends Base {
 		reportingUtils.setInputData(searchKey);
 		WebDriverWait wait=new WebDriverWait(driver(), 120);
 		wait.until(ExpectedConditions.invisibilityOf(SearchHotelStep1Page.DESTINATION_SEARCH_SPINNER));
-		Thread.sleep(2000);
 		
 	}
 	
@@ -356,7 +356,7 @@ public class RegressionHelper extends Base {
 	public void verifyhotelInformation() throws InterruptedException
 	{
 		ChooseHotelPage chooseHotelPage = new ChooseHotelPage();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		chooseHotelPage.VIEW_DETAILS.click();
 		ScreenShot("Hotel Information ","INFO",test);
 			String Address= (chooseHotelPage.HOTEL_INFORMATION_ADDRESS).getText();
@@ -377,7 +377,7 @@ public class RegressionHelper extends Base {
 			else
 				test.log(LogStatus.PASS, "<b style='color:#1976d2;Font-size:12px;font-family: verdana'>"+ "Hotel Information - Description : </b>"+"<b style='color:#3b3f42;Font-size:12px;font-family: verdana'>"+Description+"</b>" );
 		
-	
+		js.executeScript("window.scrollBy(0,-350)");	
 		chooseHotelPage.HOTEL_INFORMATION_DESCRIPTION_READ_MORE.click();
 		Thread.sleep(2000);
 		String GeneralDescription= chooseHotelPage.HOTEL_INFORMATION_DESCRIPTION_READ_MORE_GENERAL_DESCRIPTION.getText();
@@ -799,9 +799,9 @@ public class RegressionHelper extends Base {
 //			chooseHotelPage.AGGREGATOR_LINK.click();
 			
 			wait.until(ExpectedConditions.visibilityOf(chooseHotelPage.VIEW_ALL_RATES_AGGREGATOR));
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			chooseHotelPage.VIEW_ALL_RATES_AGGREGATOR.click();
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			if(BookingFlow.toLowerCase().equals("auto book"))
 			{
 				
@@ -809,7 +809,7 @@ public class RegressionHelper extends Base {
 			}
 			else
 			{
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				chooseHotelPage.SELECT_RATE_FIRST_BCOM_CANCELLABLE.click();
 			}
 
@@ -880,7 +880,7 @@ public class RegressionHelper extends Base {
 	
 	
 		ScreenShot("Hotel Selection Successful", "INFO", test);
-		chooseOtherRoom();
+//		chooseOtherRoom();
 	}
 	
 	public void chooseOtherRoom() throws InterruptedException
@@ -889,11 +889,11 @@ public class RegressionHelper extends Base {
 		ChooseHotelPage chooseHotelPage = new ChooseHotelPage();
 		if(driver().findElements(chooseHotelPage.NO_ROOM_RATES_BY()).size()>=1)
 		{
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			JavascriptExecutor js = (JavascriptExecutor) driver();
 			js.executeScript("window.scrollBy(0,-500)");
 			searchHotelStep1Page.CHECKIN_CHECKOUT_DATE_HEADER.click();
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			searchHotelStep1Page.CHECKIN_DATE_HEADER_NEXT_DAY.click();
 			searchHotelStep1Page.CHECKIN_CHECKOUT_DATE_HEADER_NEXT_DAY.click();
 			Thread.sleep(2000);
@@ -949,7 +949,6 @@ public class RegressionHelper extends Base {
 	{
 		BookHotelPage bookHotelPage = new BookHotelPage();
 		bookHotelPage.EXTRACT_TRAVELLER_INPUT.sendKeys(PNR);
-		Thread.sleep(2000);
 		bookHotelPage.EXTRACT_TRAVELLER_DETAILS.click();
 	}
 	
@@ -965,15 +964,17 @@ public class RegressionHelper extends Base {
 		Assert.assertTrue(!firstName.isEmpty());
 		Assert.assertTrue(!lastName.isEmpty());
 		Assert.assertTrue(!pnr.isEmpty());
-		Thread.sleep(15000);
+		Thread.sleep(1000);
 		if(CardAssociation.contains("Yes"))
 		{
 			Assert.assertTrue(bookHotelPage.PAYMENT_TYPE_DROPDOWN_SELECTED.isDisplayed());
 		}
 		else if(CardAssociation.contains("No"))
 		{
-			Assert.assertTrue(bookHotelPage.PAYMENT_TYPE_DROPDOWN_UNSELECTED.isDisplayed());
+			js.executeScript("window.scrollBy(0,250)");
+			Assert.assertTrue(bookHotelPage.PAYMENT_TYPE_ADD_NEW_CARD.isDisplayed());
 		}
+		ScreenShot("Extract traveller information", "PASS", test);
 	}
 	
 	
