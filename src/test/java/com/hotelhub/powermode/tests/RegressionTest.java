@@ -272,7 +272,6 @@ public class RegressionTest extends Base{
 		RegressionHelper regressionHelper = new RegressionHelper();
 		regressionHelper.clickOnBookAHotel();
 		regressionHelper.selectCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_CUSTOMER_CLIENT_RATE_HHE_ONREQUEST,"");
-		
 		regressionHelper.searchLocation(PowerModeConstants.HHE_ON_REQUEST_TEST_HOTEL_ONLINE);
 		regressionHelper.selectLocation("");
 		regressionHelper.selectCheckInCheckOutDate();
