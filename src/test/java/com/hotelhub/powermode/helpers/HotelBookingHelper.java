@@ -148,7 +148,7 @@ public class HotelBookingHelper extends Base {
 		this.Hotel=searchKey;
 		searchHotelStep1Page.DESTINATION_SEARCH_INPUT.sendKeys(searchKey);
 //		searchHotelStep1Page.DESTINATION_SEARCH_INPUT.sendKeys(Hotel);
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		searchHotelStep1Page.FIRST_RESULT.click();
 		Thread.sleep(2000);
 		ScreenShot("Search input successful", "INFO", test);
