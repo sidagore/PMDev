@@ -1,49 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="40" total="41" passed="1">
+<testng-results skipped="0" failed="0" ignored="46" total="47" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="85596" started-at="2019-04-17T05:34:02Z" finished-at="2019-04-17T05:35:28Z">
+  <suite name="Suite" duration-ms="89328" started-at="2019-04-25T08:26:58Z" finished-at="2019-04-25T08:28:28Z">
     <groups>
       <group name="Bcom">
-        <method signature="HotelBookingTest.BCOMbookingByAddingNewVISACard()[pri:2, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="BCOMbookingByAddingNewVISACard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
+        <method signature="HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="BCOMbookingByAddingNewAMEXCard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
       </group> <!-- Bcom -->
+      <group name="Jenkins">
+        <method signature="HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="BCOMbookingByAddingNewAMEXCard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
+      </group> <!-- Jenkins -->
+      <group name="DailyBooking">
+        <method signature="HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="BCOMbookingByAddingNewAMEXCard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
+      </group> <!-- DailyBooking -->
       <group name="addnewcard">
-        <method signature="HotelBookingTest.BCOMbookingByAddingNewVISACard()[pri:2, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="BCOMbookingByAddingNewVISACard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
+        <method signature="HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="BCOMbookingByAddingNewAMEXCard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
       </group> <!-- addnewcard -->
-      <group name="DailyBooking1">
-        <method signature="HotelBookingTest.BCOMbookingByAddingNewVISACard()[pri:2, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="BCOMbookingByAddingNewVISACard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
-      </group> <!-- DailyBooking1 -->
     </groups>
-    <test name="Power Mode Tests" duration-ms="85596" started-at="2019-04-17T05:34:02Z" finished-at="2019-04-17T05:35:28Z">
+    <test name="Power Mode Tests" duration-ms="89328" started-at="2019-04-25T08:26:58Z" finished-at="2019-04-25T08:28:28Z">
       <class name="com.hotelhub.powermode.tests.HotelBookingTest">
-        <test-method status="PASS" signature="instantiateBrowser(org.testng.ITestResult)[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="instantiateBrowser" is-config="true" duration-ms="4747" started-at="2019-04-17T05:34:02Z" finished-at="2019-04-17T05:34:07Z">
+        <test-method status="PASS" signature="instantiateBrowser(org.testng.ITestResult)[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="instantiateBrowser" is-config="true" duration-ms="4157" started-at="2019-04-25T08:26:58Z" finished-at="2019-04-25T08:27:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BCOMbookingByAddingNewVISACard status=SUCCESS method=HotelBookingTest.BCOMbookingByAddingNewVISACard()[pri:2, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79] output={null}]]]>
+                <![CDATA[[TestResult name=BCOMbookingByAddingNewAMEXCard status=SUCCESS method=HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiateBrowser -->
-        <test-method status="PASS" signature="loginToTheApplication()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="loginToTheApplication" is-config="true" duration-ms="3573" started-at="2019-04-17T05:34:07Z" finished-at="2019-04-17T05:34:11Z">
+        <test-method status="PASS" signature="loginToTheApplication()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="loginToTheApplication" is-config="true" duration-ms="3448" started-at="2019-04-25T08:27:03Z" finished-at="2019-04-25T08:27:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToTheApplication -->
-        <test-method status="PASS" signature="BCOMbookingByAddingNewVISACard()[pri:2, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="BCOMbookingByAddingNewVISACard" duration-ms="73807" started-at="2019-04-17T05:34:11Z" finished-at="2019-04-17T05:35:25Z">
+        <test-method status="PASS" signature="BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="BCOMbookingByAddingNewAMEXCard" duration-ms="79017" started-at="2019-04-25T08:27:06Z" finished-at="2019-04-25T08:28:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BCOMbookingByAddingNewVISACard -->
-        <test-method status="PASS" signature="cleanupBrowser()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="cleanupBrowser" is-config="true" duration-ms="899" started-at="2019-04-17T05:35:25Z" finished-at="2019-04-17T05:35:25Z">
+        </test-method> <!-- BCOMbookingByAddingNewAMEXCard -->
+        <test-method status="PASS" signature="cleanupBrowser()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="cleanupBrowser" is-config="true" duration-ms="865" started-at="2019-04-25T08:28:25Z" finished-at="2019-04-25T08:28:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanupBrowser -->
-        <test-method status="PASS" signature="writeToExcel()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="writeToExcel" is-config="true" duration-ms="2316" started-at="2019-04-17T05:35:25Z" finished-at="2019-04-17T05:35:28Z">
+        <test-method status="PASS" signature="writeToExcel()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="writeToExcel" is-config="true" duration-ms="1681" started-at="2019-04-25T08:28:26Z" finished-at="2019-04-25T08:28:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeToExcel -->
-        <test-method status="PASS" signature="copyExtent()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@3964d79]" name="copyExtent" is-config="true" duration-ms="24" started-at="2019-04-17T05:35:28Z" finished-at="2019-04-17T05:35:28Z">
+        <test-method status="PASS" signature="copyExtent()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@1b4ae4e0]" name="copyExtent" is-config="true" duration-ms="70" started-at="2019-04-25T08:28:28Z" finished-at="2019-04-25T08:28:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- copyExtent -->

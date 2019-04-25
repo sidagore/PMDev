@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Suite">
-                    <span>3 groups</span>
+                    <span>4 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="BCOMbookingByAddingNewVISACard">BCOMbookingByAddingNewVISACard</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.hotelhub.powermode.tests.HotelBookingTest" hash-for-method="BCOMbookingByAddingNewAMEXCard">BCOMbookingByAddingNewAMEXCard</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -125,9 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="BCOMbookingByAddingNewVISACard">
-                  </a> <!-- BCOMbookingByAddingNewVISACard -->
-                  <span class="method-name">BCOMbookingByAddingNewVISACard</span>
+                  <a name="BCOMbookingByAddingNewAMEXCard">
+                  </a> <!-- BCOMbookingByAddingNewAMEXCard -->
+                  <span class="method-name">BCOMbookingByAddingNewAMEXCard</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,13 +144,13 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;DailyBooking1&quot;/&gt;
+      &lt;include name=&quot;Jenkins&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Power Mode Tests&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;DailyBooking1&quot;/&gt;
+        &lt;include name=&quot;Jenkins&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
@@ -184,15 +184,23 @@
               <span class="test-group-name">Bcom</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">BCOMbookingByAddingNewVISACard</span>
+                <span class="method-in-group-name">BCOMbookingByAddingNewAMEXCard</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">DailyBooking1</span>
+              <span class="test-group-name">DailyBooking</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">BCOMbookingByAddingNewVISACard</span>
+                <span class="method-in-group-name">BCOMbookingByAddingNewAMEXCard</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Jenkins</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">BCOMbookingByAddingNewAMEXCard</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -200,7 +208,7 @@
               <span class="test-group-name">addnewcard</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">BCOMbookingByAddingNewVISACard</span>
+                <span class="method-in-group-name">BCOMbookingByAddingNewAMEXCard</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -222,9 +230,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'BCOMbookingByAddingNewVISACard')
+data.setCell(0, 1, 'BCOMbookingByAddingNewAMEXCard')
 data.setCell(0, 2, 'com.hotelhub.powermode.tests.HotelBookingTest')
-data.setCell(0, 3, 73807);
+data.setCell(0, 3, 79017);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -244,18 +252,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">40 ignored methods</span>
+            <span class="header-content">46 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.hotelhub.powermode.tests.DevTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">BCOMbookingWithVISACard</span>
-                <br/>
-                <span class="ignored-method-name">copyExtent</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.hotelhub.powermode.tests.RegressionTest</span>
               <div class="ignored-methods-div">
@@ -283,9 +282,15 @@ return data;
                 <br/>
                 <span class="ignored-method-name">displayPreviouslySearchedPNRandCustomer</span>
                 <br/>
+                <span class="ignored-method-name">verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesWhenPNRisNotAssociatedWithPaymentCard</span>
+                <br/>
                 <span class="ignored-method-name">copyExtent</span>
                 <br/>
                 <span class="ignored-method-name">verificationOfPNRReadForGalileoGDS</span>
+                <br/>
+                <span class="ignored-method-name">verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesWhenPNRisAssociatedWithPaymentCard</span>
+                <br/>
+                <span class="ignored-method-name">verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesGalileoPNR</span>
                 <br/>
                 <span class="ignored-method-name">verificationOfPNRReadForAmadeusGDS</span>
                 <br/>
@@ -299,11 +304,15 @@ return data;
                 <br/>
                 <span class="ignored-method-name">verificationOfPNRReadForApolloGDS</span>
                 <br/>
+                <span class="ignored-method-name">verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesWhenPNRisNotAssociatedWithPaymentCard</span>
+                <br/>
                 <span class="ignored-method-name">verifyUserIsAbleToSelectCheckInCheckOutDates</span>
                 <br/>
                 <span class="ignored-method-name">verificationOfDestinationSearchGoogleAndHotel</span>
                 <br/>
                 <span class="ignored-method-name">verificationOfHHEOnrequestRatesDisplay</span>
+                <br/>
+                <span class="ignored-method-name">verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesWhenPNRisAssociatedWithPaymentCard</span>
                 <br/>
                 <span class="ignored-method-name">verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesAmadeusPNR</span>
                 <br/>
@@ -314,6 +323,8 @@ return data;
                 <span class="ignored-method-name">verificationOfCheckInCheckOutDate</span>
                 <br/>
                 <span class="ignored-method-name">verificationOfUseTravellerDetailsFromPNROnStep3OnrequestRatesSabrePNR</span>
+                <br/>
+                <span class="ignored-method-name">verificationOfUseTravellerDetailsFromPNROnStep3OnlineRatesGalileoPNR</span>
                 <br/>
                 <span class="ignored-method-name">verificationOfDestinationSearchAirportAndHotel</span>
                 <br/>
@@ -328,9 +339,9 @@ return data;
                 <br/>
                 <span class="ignored-method-name">HHEbookingByAddingNewVISACard</span>
                 <br/>
-                <span class="ignored-method-name">BCOMbookingWithPortraitCard</span>
+                <span class="ignored-method-name">BCOMbookingByAddingNewVISACard</span>
                 <br/>
-                <span class="ignored-method-name">BCOMbookingByAddingNewAMEXCard</span>
+                <span class="ignored-method-name">BCOMbookingWithPortraitCard</span>
                 <br/>
                 <span class="ignored-method-name">OnRequestBookingFulfillNow</span>
                 <br/>
@@ -339,6 +350,15 @@ return data;
                 <span class="ignored-method-name">BCOMbookingWithAutoBookFeature</span>
                 <br/>
                 <span class="ignored-method-name">HHEbookingWithPortraitCard</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.hotelhub.powermode.tests.DevTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">BCOMbookingWithVISACard</span>
+                <br/>
+                <span class="ignored-method-name">copyExtent</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -352,28 +372,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.hotelhub.powermode.tests.HotelBookingTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">instantiateBrowser([TestResult name=BCOMbookingByAddingNewVISACard status=SUCCESS method=HotelBookingTest.BCOMbookingBy...)</span>
+                <span class="method-name">instantiateBrowser([TestResult name=BCOMbookingByAddingNewAMEXCard status=SUCCESS method=HotelBookingTest.BCOMbookingBy...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">loginToTheApplication</span>
-                <span class="method-start">4747 ms</span>
+                <span class="method-start">4157 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">BCOMbookingByAddingNewVISACard</span>
-                <span class="method-start">8321 ms</span>
+                <span class="method-name">BCOMbookingByAddingNewAMEXCard</span>
+                <span class="method-start">7605 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanupBrowser</span>
-                <span class="method-start">82132 ms</span>
+                <span class="method-start">86626 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">writeToExcel</span>
-                <span class="method-start">83031 ms</span>
+                <span class="method-start">87491 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">copyExtent</span>
-                <span class="method-start">85348 ms</span>
+                <span class="method-start">89174 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

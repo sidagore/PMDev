@@ -105,7 +105,7 @@ public class HotelBookingTest extends Base{
 		
 	}
 	
-	@Test(groups={"DailyBooking","addnewcard","Bcom"},priority=1,enabled=true)
+	@Test(groups={"DailyBooking","addnewcard","Bcom","Jenkins"},priority=1,enabled=true)
 	void BCOMbookingByAddingNewAMEXCard() throws Throwable
 	{
 		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();

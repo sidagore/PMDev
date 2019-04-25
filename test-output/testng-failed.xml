@@ -8,8 +8,8 @@
           <include name="cleanupBrowser"/>
           <include name="loginToTheApplication"/>
           <include name="copyExtent"/>
+          <include name="BCOMbookingByAddingNewAMEXCard"/>
           <include name="writeToExcel"/>
-          <include name="OnRequestBookingFulfillNow"/>
           <include name="instantiateBrowser"/>
         </methods>
       </class> <!-- com.hotelhub.powermode.tests.HotelBookingTest -->

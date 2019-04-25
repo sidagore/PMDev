@@ -169,7 +169,7 @@ public class HotelBookingHelper extends Base {
 		int randomDay = (int)(Math.random()*(20-1))+1;
 		System.out.println("randomDay "+randomDay);
 		
-//		driver().manage().window().setSize(new Dimension(1920, 1080));
+		driver().manage().window().setSize(new Dimension(1920, 1080));
 
 //		JavascriptExecutor js = (JavascriptExecutor) driver();
 //		js.executeScript("window.scrollBy(0,-500)");
