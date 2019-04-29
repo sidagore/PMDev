@@ -17,7 +17,10 @@ public class BookingConfirmationPage extends Base  {
 	
 	
 	@FindBy(xpath="//h2[@id='lblstatTestConfirmed']")
-	public WebElement BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS;
+	public WebElement BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS_ONLINE;
+	
+	@FindBy(xpath="//span[@id='txtconfirm']")
+	public WebElement BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS_ONREQUEST;
 	
 	@FindBy(id="spnPMConfirmation")
 	public WebElement BOOKING_CONFIRMATION_NUMBER;

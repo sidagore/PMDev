@@ -1,6 +1,7 @@
 package com.hotelhub.powermode.helpers;
 
 import java.awt.Window;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -1000,10 +1001,10 @@ public class RegressionHelper extends Base {
 	{
 		BookingConfirmationPage bookingConfirmationPage = new BookingConfirmationPage();
 		
-		wait.until(ExpectedConditions.visibilityOf(bookingConfirmationPage.BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS));
+		wait.until(ExpectedConditions.visibilityOf(bookingConfirmationPage.BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS_ONLINE));
 		ScreenShot("Booking Confirmation Page", "INFO", test);
 		test.log(LogStatus.INFO, "<b style='color:#3b3f42;Font-size:12px;font-family: verdana'>"+ "Verify the booking cofirmation" + "<b>");
-		Assert.assertTrue(bookingConfirmationPage.BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS.isDisplayed(),"Booking confirmation failed");
+		Assert.assertTrue(bookingConfirmationPage.BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS_ONLINE.isDisplayed(),"Booking confirmation failed");
 		String BookingReferenceNumber= bookingConfirmationPage.BOOKING_REFERENCE_NUMBER.getText();
 		ScreenShot("Booking Confirmation successful", "PASS", test);
 		System.out.println(BookingReferenceNumber);
@@ -1111,19 +1112,32 @@ public class RegressionHelper extends Base {
 		
 		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
 	
-		
+		List<WebElement> web =new ArrayList<WebElement>();
 		if(filterBy.contains("Reference"))
 		{
-			List<WebElement> web= previousBookingsPage.CUSTOMER_LIST;
-			String[] value= new String[web.size()];
-			for(WebElement a :web)
-			{
+			web= previousBookingsPage.CUSTOMER_LIST;
+		}
+		if(filterBy.equals("PNR"))
+		{
+			web= previousBookingsPage.PNR_LIST;
+		}
+		if(filterBy.equals("PNR"))
+		{
+			web= previousBookingsPage.PNR_LIST;
+		}
+		
+		if(filterBy.equals("PNR"))
+		{
+			web= previousBookingsPage.PNR_LIST;
+		}
+		String[] value= new String[web.size()];
+			
+		
 				
 				for(int i=0;i<web.size();i++)
 				{
-					value[i]=a.getText();
+					value[i]=web.get(i).getText();
 				}
-			}
 			
 			for(String a:value)
 			{
@@ -1134,6 +1148,31 @@ public class RegressionHelper extends Base {
 			
 			
 		}
+		
+	
+	
+	public void verifyPreviousBookingsFilterBy(String filterBy,String input) throws InterruptedException
+	{
+		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+		List<WebElement> web =new ArrayList<WebElement>();
+		if(filterBy.equals("Agent"))
+		{
+			web= previousBookingsPage.BOOKED_DATE_LIST;
+		}
+		String[] value= new String[web.size()];
+
+		for(int i=0;i<web.size();i++)
+				{
+					value[i]=web.get(i).getAttribute("data-original-title");
+				}
+			
+			
+		for(String a:value)
+			{
+				System.out.println(a);
+				if(!a.contains(input))
+				ScreenShot("Filter By "+filterBy +"Failed ", "FAIL", test);
+			}
 		
 	}
 	

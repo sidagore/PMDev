@@ -2,39 +2,42 @@
 <testng-results skipped="0" failed="0" ignored="34" total="35" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="93402" started-at="2019-04-29T05:02:57Z" finished-at="2019-04-29T05:04:31Z">
+  <suite name="Default suite" duration-ms="313330" started-at="2019-04-29T12:04:28Z" finished-at="2019-04-29T12:09:42Z">
     <groups>
+      <group name="">
+        <method signature="RegressionTest.verificationOfPreviousBookingFilter()[pri:4, instance:com.hotelhub.powermode.tests.RegressionTest@52e6fdee]" name="verificationOfPreviousBookingFilter" class="com.hotelhub.powermode.tests.RegressionTest"/>
+      </group> <!--  -->
     </groups>
-    <test name="Default test" duration-ms="93402" started-at="2019-04-29T05:02:57Z" finished-at="2019-04-29T05:04:31Z">
+    <test name="Default test" duration-ms="313330" started-at="2019-04-29T12:04:28Z" finished-at="2019-04-29T12:09:42Z">
       <class name="com.hotelhub.powermode.tests.RegressionTest">
-        <test-method status="PASS" signature="instantiateBrowser(org.testng.ITestResult)[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="instantiateBrowser" is-config="true" duration-ms="4216" started-at="2019-04-29T05:02:57Z" finished-at="2019-04-29T05:03:02Z">
+        <test-method status="PASS" signature="instantiateBrowser(org.testng.ITestResult)[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@52e6fdee]" name="instantiateBrowser" is-config="true" duration-ms="4303" started-at="2019-04-29T12:04:28Z" finished-at="2019-04-29T12:04:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cancelMyBookings status=SUCCESS method=RegressionTest.cancelMyBookings()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b] output={null}]]]>
+                <![CDATA[[TestResult name=verificationOfPreviousBookingFilter status=SUCCESS method=RegressionTest.verificationOfPreviousBookingFilter()[pri:4, instance:com.hotelhub.powermode.tests.RegressionTest@52e6fdee] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiateBrowser -->
-        <test-method status="PASS" signature="loginToTheApplication()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="loginToTheApplication" is-config="true" duration-ms="13467" started-at="2019-04-29T05:03:02Z" finished-at="2019-04-29T05:03:15Z">
+        <test-method status="PASS" signature="loginToTheApplication()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@52e6fdee]" name="loginToTheApplication" is-config="true" duration-ms="13645" started-at="2019-04-29T12:04:33Z" finished-at="2019-04-29T12:04:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToTheApplication -->
-        <test-method status="PASS" signature="cancelMyBookings()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="cancelMyBookings" duration-ms="71845" started-at="2019-04-29T05:03:15Z" finished-at="2019-04-29T05:04:27Z">
+        <test-method status="PASS" signature="verificationOfPreviousBookingFilter()[pri:4, instance:com.hotelhub.powermode.tests.RegressionTest@52e6fdee]" name="verificationOfPreviousBookingFilter" duration-ms="291392" started-at="2019-04-29T12:04:46Z" finished-at="2019-04-29T12:09:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cancelMyBookings -->
-        <test-method status="PASS" signature="cleanupBrowser()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="cleanupBrowser" is-config="true" duration-ms="882" started-at="2019-04-29T05:04:27Z" finished-at="2019-04-29T05:04:28Z">
+        </test-method> <!-- verificationOfPreviousBookingFilter -->
+        <test-method status="PASS" signature="cleanupBrowser()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@52e6fdee]" name="cleanupBrowser" is-config="true" duration-ms="891" started-at="2019-04-29T12:09:38Z" finished-at="2019-04-29T12:09:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanupBrowser -->
-        <test-method status="PASS" signature="writeToExcel()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="writeToExcel" is-config="true" duration-ms="2574" started-at="2019-04-29T05:04:28Z" finished-at="2019-04-29T05:04:30Z">
+        <test-method status="PASS" signature="writeToExcel()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@52e6fdee]" name="writeToExcel" is-config="true" duration-ms="2911" started-at="2019-04-29T12:09:39Z" finished-at="2019-04-29T12:09:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeToExcel -->
-        <test-method status="PASS" signature="copyExtent()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="copyExtent" is-config="true" duration-ms="250" started-at="2019-04-29T05:04:30Z" finished-at="2019-04-29T05:04:31Z">
+        <test-method status="PASS" signature="copyExtent()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@52e6fdee]" name="copyExtent" is-config="true" duration-ms="20" started-at="2019-04-29T12:09:42Z" finished-at="2019-04-29T12:09:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- copyExtent -->

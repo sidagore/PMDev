@@ -513,8 +513,10 @@ public class RegressionTest extends Base{
 		RegressionHelper regressionHelper = new RegressionHelper();
 		regressionHelper.goToPreviousBookings();
 		regressionHelper.applySearch("PNR","O3OEWG");
+		regressionHelper.verifyPreviousBookingsFilter("PNR","O3OEWG");
 		regressionHelper.applyFilter("Agent","Shiva Prasad");
-		Thread.sleep(15000);
+		regressionHelper.verifyPreviousBookingsFilterBy("Agent","Shiva Prasad");
+
 		reportingUtils.setTestResult("PASS");
 		
 	}

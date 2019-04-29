@@ -521,13 +521,13 @@ public class HotelBookingHelper extends Base {
 	public void verifyBookingConfirmationOnRequest() throws InterruptedException, ParseException
 	{
 		BookingConfirmationPage bookingConfirmationPage = new BookingConfirmationPage();
-		wait.until(ExpectedConditions.visibilityOf(bookingConfirmationPage.BOOKING_CONFIRMATION_NUMBER));
+		
+		wait.until(ExpectedConditions.visibilityOf(bookingConfirmationPage.BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS_ONREQUEST));
 		JavascriptExecutor js = (JavascriptExecutor) driver();
 		js.executeScript("window.scrollBy(0,-500)");
-		
 		ScreenShot("Booking Confirmation Page", "INFO", test);
 		test.log(LogStatus.INFO, "<b style='color:#3b3f42;Font-size:12px;font-family: verdana'>"+ "Verify the booking cofirmation" + "<b>");
-		Assert.assertTrue(bookingConfirmationPage.BOOKING_CONFIRMATION_NUMBER.isDisplayed(),"Booking confirmation failed");
+		Assert.assertTrue(bookingConfirmationPage.BOOKING_CONFIRMATION_SUCCESS_TEST_BOOKINGS_ONREQUEST.isDisplayed(),"Booking confirmation failed");
 		BookingReferenceNumber= bookingConfirmationPage.BOOKING_REFERENCE_NUMBER_ONREQUEST.getText();
 //		if(bookingConfirmationPage.BOOKING_CONFIRMATION_NUMBER.isDisplayed())
 //		ConfirmationNumber = bookingConfirmationPage.BOOKING_CONFIRMATION_NUMBER.getText();

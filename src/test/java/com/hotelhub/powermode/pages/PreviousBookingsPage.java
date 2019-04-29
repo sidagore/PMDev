@@ -105,13 +105,13 @@ public class PreviousBookingsPage extends Base {
 	public WebElement HOTEL_NAME_LIST;
 	
 	@FindBy(xpath="//div[@class='col-3']/ancestor::div[1]/following::div[1]//div[contains(@class,'col-6')]/span")
-	public WebElement GUEST_NAME_LIST;
+	public List<WebElement> GUEST_NAME_LIST;
 	
 	@FindBy(xpath="//div[@class='col-6']/ancestor::div[1]/following::div[1]//div[contains(@class,'col-6')]/a")
-	public WebElement BOOKED_DATE_LIST;
+	public List<WebElement> BOOKED_DATE_LIST;
 	
 	@FindBy(xpath="//span[@class='pl-5']/a")
-	public WebElement PNR_LIST;
+	public List<WebElement> PNR_LIST;
 	
 	@FindBy(xpath="//a[contains(@data-original-title,'GDS PNR')]")
 	public WebElement PNR_LINK;
