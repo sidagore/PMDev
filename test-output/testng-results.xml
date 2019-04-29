@@ -1,53 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="9" total="10" passed="1">
+<testng-results skipped="0" failed="0" ignored="34" total="35" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="80346" started-at="2019-04-25T07:16:00Z" finished-at="2019-04-25T07:17:20Z">
+  <suite name="Default suite" duration-ms="93402" started-at="2019-04-29T05:02:57Z" finished-at="2019-04-29T05:04:31Z">
     <groups>
-      <group name="Bcom">
-        <method signature="HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="BCOMbookingByAddingNewAMEXCard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
-      </group> <!-- Bcom -->
-      <group name="DailyBooking">
-        <method signature="HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="BCOMbookingByAddingNewAMEXCard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
-      </group> <!-- DailyBooking -->
-      <group name="addnewcard">
-        <method signature="HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="BCOMbookingByAddingNewAMEXCard" class="com.hotelhub.powermode.tests.HotelBookingTest"/>
-      </group> <!-- addnewcard -->
     </groups>
-    <test name="Default test" duration-ms="80346" started-at="2019-04-25T07:16:00Z" finished-at="2019-04-25T07:17:20Z">
-      <class name="com.hotelhub.powermode.tests.HotelBookingTest">
-        <test-method status="PASS" signature="instantiateBrowser(org.testng.ITestResult)[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="instantiateBrowser" is-config="true" duration-ms="4238" started-at="2019-04-25T07:16:00Z" finished-at="2019-04-25T07:16:04Z">
+    <test name="Default test" duration-ms="93402" started-at="2019-04-29T05:02:57Z" finished-at="2019-04-29T05:04:31Z">
+      <class name="com.hotelhub.powermode.tests.RegressionTest">
+        <test-method status="PASS" signature="instantiateBrowser(org.testng.ITestResult)[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="instantiateBrowser" is-config="true" duration-ms="4216" started-at="2019-04-29T05:02:57Z" finished-at="2019-04-29T05:03:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=BCOMbookingByAddingNewAMEXCard status=SUCCESS method=HotelBookingTest.BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c] output={null}]]]>
+                <![CDATA[[TestResult name=cancelMyBookings status=SUCCESS method=RegressionTest.cancelMyBookings()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiateBrowser -->
-        <test-method status="PASS" signature="loginToTheApplication()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="loginToTheApplication" is-config="true" duration-ms="3526" started-at="2019-04-25T07:16:04Z" finished-at="2019-04-25T07:16:08Z">
+        <test-method status="PASS" signature="loginToTheApplication()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="loginToTheApplication" is-config="true" duration-ms="13467" started-at="2019-04-29T05:03:02Z" finished-at="2019-04-29T05:03:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToTheApplication -->
-        <test-method status="PASS" signature="BCOMbookingByAddingNewAMEXCard()[pri:1, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="BCOMbookingByAddingNewAMEXCard" duration-ms="69654" started-at="2019-04-25T07:16:08Z" finished-at="2019-04-25T07:17:17Z">
+        <test-method status="PASS" signature="cancelMyBookings()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="cancelMyBookings" duration-ms="71845" started-at="2019-04-29T05:03:15Z" finished-at="2019-04-29T05:04:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BCOMbookingByAddingNewAMEXCard -->
-        <test-method status="PASS" signature="cleanupBrowser()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="cleanupBrowser" is-config="true" duration-ms="911" started-at="2019-04-25T07:17:17Z" finished-at="2019-04-25T07:17:18Z">
+        </test-method> <!-- cancelMyBookings -->
+        <test-method status="PASS" signature="cleanupBrowser()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="cleanupBrowser" is-config="true" duration-ms="882" started-at="2019-04-29T05:04:27Z" finished-at="2019-04-29T05:04:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanupBrowser -->
-        <test-method status="PASS" signature="writeToExcel()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="writeToExcel" is-config="true" duration-ms="1717" started-at="2019-04-25T07:17:18Z" finished-at="2019-04-25T07:17:20Z">
+        <test-method status="PASS" signature="writeToExcel()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="writeToExcel" is-config="true" duration-ms="2574" started-at="2019-04-29T05:04:28Z" finished-at="2019-04-29T05:04:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeToExcel -->
-        <test-method status="PASS" signature="copyExtent()[pri:0, instance:com.hotelhub.powermode.tests.HotelBookingTest@4bec1f0c]" name="copyExtent" is-config="true" duration-ms="160" started-at="2019-04-25T07:17:20Z" finished-at="2019-04-25T07:17:20Z">
+        <test-method status="PASS" signature="copyExtent()[pri:0, instance:com.hotelhub.powermode.tests.RegressionTest@5649fd9b]" name="copyExtent" is-config="true" duration-ms="250" started-at="2019-04-29T05:04:30Z" finished-at="2019-04-29T05:04:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- copyExtent -->
-      </class> <!-- com.hotelhub.powermode.tests.HotelBookingTest -->
+      </class> <!-- com.hotelhub.powermode.tests.RegressionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

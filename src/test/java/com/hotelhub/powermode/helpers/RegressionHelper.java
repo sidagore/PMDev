@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,6 +39,10 @@ public class RegressionHelper extends Base {
 	JavascriptExecutor js = (JavascriptExecutor) driver();
 	public static String BookingType;
 	public static String BookingFlow;
+	public static String searchBy;
+	public static String filterCriteria;
+	public static String filterBy;
+	public static String input;
 	public void clickOnBookAHotel()
 	{
 		_logger.info("Click on Book a Hotel button");
@@ -1010,28 +1015,102 @@ public class RegressionHelper extends Base {
 	
 
 	
-	public void searchBookingsPreviousBookings(String filterBy,String input) throws InterruptedException
+	public void goToPreviousBookings() throws InterruptedException
 	{
-		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+	
 		HomePage homePage = new HomePage();
+		Thread.sleep(2000);
 		homePage.MORE.click();
 		homePage.PREVIOUS_BOOKINGS.click();
 		
+		Thread.sleep(2000);
+
 		
-		Select select = new Select(previousBookingsPage.MARKET);
-		select.deselectByVisibleText("United Kingdom");
-		
-		previousBookingsPage.GUEST_NAME_SEARCH.sendKeys(input);
-		previousBookingsPage.LIST_BOOKINGS.click();
-		
-		verifyPreviousBookingsFilter(filterBy, input);
 	}
 	
+	
+	public void applySearch(String searchBy,String input)
+	{
+		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+		this.searchBy=searchBy;
+		this.input=input;
+		if(searchBy.contains("Market"))
+		{
+			Select select = new Select(previousBookingsPage.MARKET);
+			select.selectByVisibleText(input);
+		}
+		if(searchBy.contains("Guest Name"))
+		{
+			previousBookingsPage.GUEST_NAME_SEARCH.sendKeys(input);
+		}
+		if(searchBy.contains("PNR"))
+		{
+			previousBookingsPage.PNR_SEARCH.clear();
+			previousBookingsPage.PNR_SEARCH.sendKeys(input);
+		}
+		previousBookingsPage.LIST_BOOKINGS.click();
+		
+	}
+	
+	public void applyFilter(String filterBy,String filterCriteria)
+	{
+		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+		
+		this.filterBy=filterBy;
+		this.filterCriteria=filterCriteria;
+		
+			Select select = new Select(previousBookingsPage.FILTER_BY_DROP_DOWN);
+			select.selectByVisibleText(filterBy);
+			Select select1 = new Select(previousBookingsPage.FILTER_NAME_DROP_DOWN);
+			select1.selectByVisibleText(filterCriteria);
+		
+	}
+
+	public void sortTheResults(String sortBy, String order) throws InterruptedException
+	{
+		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+		
+		Select select = new Select(previousBookingsPage.SORT_BY_DROP_DOWN);
+		select.selectByVisibleText(sortBy);
+		Thread.sleep(2000);
+		if(order.equals("desc"))
+		{
+			try
+			{
+				previousBookingsPage.SORT_BY_DESCENDING.click();
+			}
+			catch(Exception e)
+			{
+				
+			}
+		}
+		
+		if(order.equals("asce"))
+		{
+			try
+			{
+				previousBookingsPage.SORT_BY_ASCENDING.click();
+			}
+			catch(Exception e)
+			{
+				
+			}
+		}
+		
+		
+		driver().manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
+		WebDriverWait wait = new WebDriverWait(driver(),60);
+		
+		
+	}
+
 	
 	public void verifyPreviousBookingsFilter(String filterBy, String input) throws InterruptedException
 	{
 		
 		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+	
 		
 		if(filterBy.contains("Reference"))
 		{
@@ -1057,6 +1136,35 @@ public class RegressionHelper extends Base {
 		}
 		
 	}
+	
+	
+	public void cancelMultipleBookings() throws InterruptedException
+	{
+		
+		
+		while(isElementPresent(PreviousBookingsPage.CANCEL_ICON_BY()))
+		{
+			PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+			Actions action = new Actions(driver());
+			action.moveToElement(previousBookingsPage.BOOKING_REFERENCE_LIST).build().perform();
+			Thread.sleep(1000);
+			previousBookingsPage.CANCEL_ICON.click();
+			wait.until(ExpectedConditions.visibilityOf(previousBookingsPage.CANCEL_YES));
+			previousBookingsPage.CANCEL_YES.click();
+			wait.until(ExpectedConditions.visibilityOf(previousBookingsPage.CANCELLATION_REFRENCE_NUMBER));
+			String CancellationRefrenceNumber=previousBookingsPage.CANCELLATION_REFRENCE_NUMBER.getText();
+			ScreenShot("Booking cancelled successfully", "PASS", test);
+			System.out.println("CancellationRefrenceNumber "+CancellationRefrenceNumber);
+			reportingUtils.setOutPutData("Cancellation Reference# "+CancellationRefrenceNumber);
+			previousBookingsPage.CANCELLATION_CLOSE.click();
+			applySearch(searchBy,input);
+			applyFilter(filterBy,filterCriteria);
+			sortTheResults("Status","asce");
+			
+		}
+	
+	}
+	
 	
 	public void cancelBookingPH(String BookingReferenceNumber, ExtentTest test) throws InterruptedException
 	{

@@ -103,7 +103,7 @@ public class SearchHotelStep1Page extends Base {
 	public WebElement CHECK_IN_DATE_SELECTION_YEAR;
 
 	
-	@FindBy(xpath="//tr/td/span[contains(@class,'month') and (text()='Jul')]")
+	@FindBy(xpath="//tr/td/span[contains(@class,'month') and (text()='Sep')]")
 	public WebElement CHECK_IN_DATE_SELECTION_MONTH;
 	
 	@FindBy(xpath="//tbody/*/td[(@class='day') and (text()='15')]")

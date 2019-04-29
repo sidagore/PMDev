@@ -11,10 +11,10 @@
     <classes>
       <class name="com.hotelhub.powermode.tests.HotelBookingTest">
         <methods>
+          <include name="HHEbookingWithAutoBookFeature"/>
           <include name="cleanupBrowser"/>
           <include name="loginToTheApplication"/>
           <include name="copyExtent"/>
-          <include name="BCOMbookingByAddingNewAMEXCard"/>
           <include name="writeToExcel"/>
           <include name="instantiateBrowser"/>
         </methods>

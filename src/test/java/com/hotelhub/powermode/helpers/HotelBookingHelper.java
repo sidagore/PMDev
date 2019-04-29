@@ -166,7 +166,9 @@ public class HotelBookingHelper extends Base {
 	{
 		test.log(LogStatus.INFO, "<b style='color:#3b3f42;Font-size:12px;font-family: verdana'>"+ "Select Check-In and Check-Out date" + "<b>");
 		SearchHotelStep1Page searchHotelStep1Page = new SearchHotelStep1Page();
-		int randomDay = (int)(Math.random()*(20-1))+1;
+		int randomDay = (int)(Math.random()*(20-10))+10;
+//		Random r = new Random();
+//		int result = r.nextInt(high-low) + low;
 		System.out.println("randomDay "+randomDay);
 		
 		driver().manage().window().setSize(new Dimension(1920, 1080));
@@ -185,6 +187,7 @@ public class HotelBookingHelper extends Base {
 		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_MONTH.click();
 //		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_DAY.click();
 		String xpath="//tbody/*/td[(@class='day') and (text()="+randomDay+")]";
+		Thread.sleep(2000);
 		driver().findElement(By.xpath(xpath)).click();
 		int checkOutDate=randomDay+1;
 		String xpath_checkout="//tbody/*/td[contains(@class,'day') and (text()="+checkOutDate+")]";

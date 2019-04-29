@@ -387,19 +387,19 @@ public class ColorXLSX {
 	  
 	   
 	   
-	   int firstTerm=0;
-	   int secondTerm=1;
-	   int thirdTerm=0;
-	   
-	   int i=0;
-	   while(i<20)
-	   {
-		   thirdTerm=firstTerm+secondTerm;
-		   firstTerm=secondTerm;
-		   secondTerm=thirdTerm;
-		   i++;
-		   System.out.println(thirdTerm);
-	   }
+//	   int firstTerm=0;
+//	   int secondTerm=1;
+//	   int thirdTerm=0;
+//	   
+//	   int i=0;
+//	   while(i<20)
+//	   {
+//		   thirdTerm=firstTerm+secondTerm;
+//		   firstTerm=secondTerm;
+//		   secondTerm=thirdTerm;
+//		   i++;
+//		   System.out.println(thirdTerm);
+//	   }
 	   
 //	   int a=15;
 //	   int b=5;
@@ -417,6 +417,55 @@ public class ColorXLSX {
 //	   }
 	   
 	   
+	   //first 50 prime numbers
+	   
+	   int input=1 ;
+	   
+	   for(int i=2;i<input;i++)
+	   {
+		   
+		   if(input%i==0)
+		   {
+			   System.out.println("Given number is not prime number");
+		   }
+		   
+		   
+	   }
+	   
+	   
+	   
+	   
+	   
+	   
+	   //implicit wait
+	   
+	   
+	   
+//	   int n=153;
+//	   int sum=0;
+//	   int sumOfLastDigit=1;
+//	   int numberOfDigits=String.valueOf(n).length();
+//	   
+//	   while(n!=0)
+//	   {
+//		   int lastDigit = n%10;
+//		   for(int i=0;i<numberOfDigits;i++)
+//		   {
+//			   
+//			   sumOfLastDigit=sumOfLastDigit*lastDigit;
+//		   }
+//		   sum=sum+sumOfLastDigit;
+//		   sumOfLastDigit=1;
+//		   n=n/10;
+//	   }
+//	   System.out.println("Sum of 153 "+sum);
+//	   
+	   
+	   
+	   
+	   
+	   int randomDay = (int)(Math.random()*(20-10))+10;
+	   System.out.println(randomDay);
 	   
 	   
 	   
@@ -431,6 +480,25 @@ public class ColorXLSX {
 	   
 	   
 	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	    
 	   
 	   
 	   
@@ -457,10 +525,7 @@ public class ColorXLSX {
 //   }
    
    
-   void methodOne(int i)
-   {
-	   
-   }
+  
 
    
    

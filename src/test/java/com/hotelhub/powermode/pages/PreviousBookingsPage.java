@@ -2,6 +2,7 @@ package com.hotelhub.powermode.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
@@ -68,6 +69,22 @@ public class PreviousBookingsPage extends Base {
 	@FindBy(id="txtcity")
 	public WebElement CITY;
 	
+	@FindBy(id="ddlfilter")
+	public WebElement FILTER_BY_DROP_DOWN;
+	@FindBy(id="ddlfilterby")
+	public WebElement FILTER_NAME_DROP_DOWN;
+	
+	@FindBy(id="ddlsort")
+	public WebElement SORT_BY_DROP_DOWN;
+	
+	@FindBy(xpath="//a[@class='sort-by']")
+	public WebElement SORT_BY_LINK;
+	
+	@FindBy(xpath="//i[@id='lnkpbsortorder' and @class='fa icon-nm-tct-sort-decrease-to-increase-1']")
+	public WebElement SORT_BY_ASCENDING;
+	
+	@FindBy(xpath="//i[@id='lnkpbsortorder' and @class='fa icon-nm-tct-sort-increase-to-decrease-1']")
+	public WebElement SORT_BY_DESCENDING;
 	
 //	@FindBy(xpath="//div[@class='col-lg-4 align-self-center']")
 //	public WebElement BOOKING_REFERENCE_LIST;
@@ -115,6 +132,10 @@ public class PreviousBookingsPage extends Base {
 	@FindBy(xpath="//i[@data-original-title='Cancel booking']")
 	public WebElement CANCEL_ICON;
 
+	public static By CANCEL_ICON_BY() {
+		By byObj = By.xpath("//i[@data-original-title='Cancel booking']");
+		return byObj;
+	}
 	
 	@FindBy(id="btncancelyes")
 	public WebElement CANCEL_YES;

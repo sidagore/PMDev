@@ -47,7 +47,7 @@ public class LoginHelper extends Base{
 			Url=props.getProperty("PowerModeDev5051");
 			break;
 		default:
-			Url=props.getProperty("PowerMode");
+			Url=props.getProperty("PowerModeAlpha");
 			break;
 		}
 		
@@ -65,6 +65,14 @@ public class LoginHelper extends Base{
 		Thread.sleep(2000);
 		getEcho();
 		
+		try
+		{
+			homePage.POWER_MODE.click();
+		}
+		catch(Exception e)
+		{
+			
+		}
 //		homePage.HOTEL_HUB_LINK.click();
 		
 //		if(homePage.POWER_MODE.isDisplayed())

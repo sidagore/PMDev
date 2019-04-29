@@ -105,7 +105,7 @@ public class HotelBookingTest extends Base{
 		
 	}
 	
-	@Test(groups={"DailyBooking","addnewcard","Bcom","Jenkins"},priority=1,enabled=true)
+	@Test(groups={"DailyBooking","addnewcard","Bcom",""},priority=1,enabled=true)
 	void BCOMbookingByAddingNewAMEXCard() throws Throwable
 	{
 		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();
@@ -250,7 +250,7 @@ public class HotelBookingTest extends Base{
 		
 	}
 	
-	@Test(groups={"DailyBooking",""},priority=3,enabled=true)
+	@Test(groups={"DailyBooking","Jenkins"},priority=3,enabled=true)
 	void HHEbookingWithAutoBookFeature() throws Throwable
 	{
 		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();

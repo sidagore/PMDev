@@ -511,12 +511,25 @@ public class RegressionTest extends Base{
 		reportingUtils.setInputData(PowerModeConstants.TEST_CUSTOMER);
 		
 		RegressionHelper regressionHelper = new RegressionHelper();
-		regressionHelper.searchBookingsPreviousBookings("Guest Name","ARNOLD MR EXPRESS");
+		regressionHelper.goToPreviousBookings();
+		regressionHelper.applySearch("PNR","O3OEWG");
+		regressionHelper.applyFilter("Agent","Shiva Prasad");
+		Thread.sleep(15000);
 		reportingUtils.setTestResult("PASS");
 		
 	}
 	
-	
+	@Test
+	public void cancelMyBookings() throws InterruptedException
+	{
+		
+		RegressionHelper regressionHelper = new RegressionHelper();
+		regressionHelper.goToPreviousBookings();
+		regressionHelper.applySearch("PNR","OPLWZW");
+		regressionHelper.applyFilter("Agent","Shiva Prasad");
+		regressionHelper.sortTheResults("Status","asce");
+		regressionHelper.cancelMultipleBookings();
+	}
 	
 
 	/*
