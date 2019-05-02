@@ -65,14 +65,14 @@ public class LoginHelper extends Base{
 		Thread.sleep(2000);
 		getEcho();
 		
-		try
-		{
-			homePage.POWER_MODE.click();
-		}
-		catch(Exception e)
-		{
-			
-		}
+//		try
+//		{
+//			homePage.POWER_MODE.click();
+//		}
+//		catch(Exception e)
+//		{
+//			
+//		}
 //		homePage.HOTEL_HUB_LINK.click();
 		
 //		if(homePage.POWER_MODE.isDisplayed())

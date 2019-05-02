@@ -1121,22 +1121,22 @@ public class RegressionHelper extends Base {
 		{
 			web= previousBookingsPage.PNR_LIST;
 		}
-		if(filterBy.equals("PNR"))
-		{
-			web= previousBookingsPage.PNR_LIST;
-		}
-		
-		if(filterBy.equals("PNR"))
-		{
-			web= previousBookingsPage.PNR_LIST;
-		}
+//		if(filterBy.equals("PNR"))
+//		{
+//			web= previousBookingsPage.PNR_LIST;
+//		}
+//		
+//		if(filterBy.equals("PNR"))
+//		{
+//			web= previousBookingsPage.PNR_LIST;
+//		}
 		String[] value= new String[web.size()];
 			
 		
 				
 				for(int i=0;i<web.size();i++)
 				{
-					value[i]=web.get(i).getText();
+					value[i]=web.get(i).getAttribute("textContent");
 				}
 			
 			for(String a:value)
@@ -1149,11 +1149,26 @@ public class RegressionHelper extends Base {
 			
 		}
 		
+	public void verifyPNR()
+	{
+		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+//		previousBookingsPage.BOOKING_REFERENCE_LIST.click();
+//		String script = return document.getElementByXpath('//span[@class='pl-5']/a').innerHTML;
+//		System.out.println(script);
+		String pnr = previousBookingsPage.PNR.getAttribute("textContent");
+		
+		
+		System.out.println("pnr "+pnr);
+		
+		
+	}
+	
 	
 	
 	public void verifyPreviousBookingsFilterBy(String filterBy,String input) throws InterruptedException
 	{
 		PreviousBookingsPage previousBookingsPage = new PreviousBookingsPage();
+		Thread.sleep(2000);
 		List<WebElement> web =new ArrayList<WebElement>();
 		if(filterBy.equals("Agent"))
 		{

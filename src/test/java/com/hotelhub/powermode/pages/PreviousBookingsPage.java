@@ -113,6 +113,9 @@ public class PreviousBookingsPage extends Base {
 	@FindBy(xpath="//span[@class='pl-5']/a")
 	public List<WebElement> PNR_LIST;
 	
+	@FindBy(xpath="//span[@class='pl-5']/a")
+	public WebElement PNR;
+	
 	@FindBy(xpath="//a[contains(@data-original-title,'GDS PNR')]")
 	public WebElement PNR_LINK;
 	

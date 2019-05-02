@@ -74,7 +74,7 @@ public class HotelBookingTest extends Base{
 
 	
 	
-	@Test(groups={"DailyBooking1","addnewcard","Bcom"},priority=2,enabled=true)
+	@Test(groups={"DailyBooking1","addnewcard","Bcom","Jenkins"},priority=2,enabled=true)
 	void BCOMbookingByAddingNewVISACard() throws Throwable
 	{
 		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();
@@ -90,7 +90,7 @@ public class HotelBookingTest extends Base{
 //		hotelBookingHelper.initializeInputData();
 		hotelBookingHelper.enterCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_PNR_SABRE,"");
 		hotelBookingHelper.searcHotel(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
-		hotelBookingHelper.selectCheckInCheckOutDate();
+		hotelBookingHelper.selectCheckInCheckOutDateFixed();
 		hotelBookingHelper.clickOnSearchHotels();
 		hotelBookingHelper.chooseHotel("BCOM","");
 		hotelBookingHelper.addNewCard(PowerModeConstants.PAYMENT_CARD_VISA);
@@ -250,7 +250,7 @@ public class HotelBookingTest extends Base{
 		
 	}
 	
-	@Test(groups={"DailyBooking","Jenkins"},priority=3,enabled=true)
+	@Test(groups={"DailyBooking",""},priority=3,enabled=true)
 	void HHEbookingWithAutoBookFeature() throws Throwable
 	{
 		String methodName=new Object(){}.getClass().getEnclosingMethod().getName();

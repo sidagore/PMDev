@@ -498,6 +498,26 @@ public class RegressionTest extends Base{
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Test(priority=4,groups={""})
 	public void verificationOfPreviousBookingFilter() throws Throwable
 	{
@@ -513,6 +533,7 @@ public class RegressionTest extends Base{
 		RegressionHelper regressionHelper = new RegressionHelper();
 		regressionHelper.goToPreviousBookings();
 		regressionHelper.applySearch("PNR","O3OEWG");
+//		regressionHelper.verifyPNR();
 		regressionHelper.verifyPreviousBookingsFilter("PNR","O3OEWG");
 		regressionHelper.applyFilter("Agent","Shiva Prasad");
 		regressionHelper.verifyPreviousBookingsFilterBy("Agent","Shiva Prasad");
@@ -520,6 +541,31 @@ public class RegressionTest extends Base{
 		reportingUtils.setTestResult("PASS");
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@Test
 	public void cancelMyBookings() throws InterruptedException

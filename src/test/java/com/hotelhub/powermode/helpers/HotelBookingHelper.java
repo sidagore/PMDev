@@ -219,6 +219,19 @@ public class HotelBookingHelper extends Base {
 		
 	}
 	
+	public void selectCheckInCheckOutDateFixed() throws InterruptedException
+	{
+		test.log(LogStatus.INFO, "<b style='color:#3b3f42;Font-size:12px;font-family: verdana'>"+ "Select Check-In and Check-Out date" + "<b>");
+		SearchHotelStep1Page searchHotelStep1Page = new SearchHotelStep1Page();
+		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_BUTTON.click();
+		Thread.sleep(1000);
+		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_STEP1.click();
+		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_MONTH.click();
+		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_DAY.click();
+		Thread.sleep(2000);
+	}
+	
+	
 	public void clickOnSearchHotels() throws InterruptedException
 	{
 		SearchHotelStep1Page searchHotelStep1Page = new SearchHotelStep1Page();
