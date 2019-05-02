@@ -456,7 +456,7 @@ public class HotelBookingTest extends Base{
 //		hotelBookingHelper.initializeInputData();
 		hotelBookingHelper.enterCustomerOrPNROrReferenceNumber(PowerModeConstants.TEST_PNR_AMADEUS,"AMADEUS");
 		hotelBookingHelper.searcHotel(PowerModeConstants.BCOM_BOOKING_TEST_HOTEL);
-		hotelBookingHelper.selectCheckInCheckOutDate();
+		hotelBookingHelper.selectCheckInCheckOutDateFixed();
 		hotelBookingHelper.clickOnSearchHotels();
 		hotelBookingHelper.chooseHotel("ONREQUEST","");
 		hotelBookingHelper.fulFillNowDetailsAndClickBookButton();
