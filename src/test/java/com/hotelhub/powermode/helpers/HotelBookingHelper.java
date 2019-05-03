@@ -172,10 +172,21 @@ public class HotelBookingHelper extends Base {
 		System.out.println("randomDay "+randomDay);
 		
 		driver().manage().window().setSize(new Dimension(1920, 1080));
+		
+		String date=searchHotelStep1Page.CHECK_IN_DATE.getAttribute("value");
+		
+		
+		
+		
+		System.out.println("Date  "+date);
 
-//		JavascriptExecutor js = (JavascriptExecutor) driver();
+		JavascriptExecutor js = (JavascriptExecutor) driver();
 //		js.executeScript("window.scrollBy(0,-500)");
 		
+		js.executeScript("document.setAttribute('value','" + "12-Sep-2019" + "');", searchHotelStep1Page.CHECK_IN_DATE);
+		
+//	     ((JavascriptExecutor) objreterieveActionbean.getDriver()).executeScript("document.getElementById('" + OR.getProperty(object) + "').removeAttribute('readonly',0);"); // Enables the from date box
+	     
 		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_BUTTON.click();
 		
 		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_STEP1.click();
@@ -226,7 +237,9 @@ public class HotelBookingHelper extends Base {
 		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_BUTTON.click();
 		Thread.sleep(1000);
 		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_STEP1.click();
+		Thread.sleep(1000);
 		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_MONTH.click();
+		Thread.sleep(1000);
 		searchHotelStep1Page.CHECK_IN_DATE_SELECTION_DAY.click();
 		Thread.sleep(2000);
 	}

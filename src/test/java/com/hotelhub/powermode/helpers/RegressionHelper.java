@@ -1141,7 +1141,6 @@ public class RegressionHelper extends Base {
 			
 			for(String a:value)
 			{
-				System.out.println(a);
 				if(!a.contains(input))
 					ScreenShot("Filter By "+filterBy +"Failed ", "FAIL", test);
 			}
@@ -1156,9 +1155,6 @@ public class RegressionHelper extends Base {
 //		String script = return document.getElementByXpath('//span[@class='pl-5']/a').innerHTML;
 //		System.out.println(script);
 		String pnr = previousBookingsPage.PNR.getAttribute("textContent");
-		
-		
-		System.out.println("pnr "+pnr);
 		
 		
 	}
@@ -1184,7 +1180,7 @@ public class RegressionHelper extends Base {
 			
 		for(String a:value)
 			{
-				System.out.println(a);
+				
 				if(!a.contains(input))
 				ScreenShot("Filter By "+filterBy +"Failed ", "FAIL", test);
 			}

@@ -50,6 +50,7 @@ import org.apache.commons.io.FileUtils;
 	   String file = test.addScreenCapture("\\\\10.201.30.101\\CommonShare\\AutomationResults"+"\\ExtentReports\\Images\\" + result.getMethod().getMethodName()+randomNumber + ".png");
 	   test.log(LogStatus.FAIL, result.getMethod().getMethodName() + "test is failed", file);
 	   test.log(LogStatus.FAIL, result.getMethod().getMethodName() + "test is failed"+"EchoToken " +reportingUtils.getEchoToken(), result.getThrowable().getMessage());
+	   test.log(LogStatus.FAIL, "EchoToken " +reportingUtils.getEchoToken());
 	   System.out.println("EchoToken " +reportingUtils.getEchoToken());
 	  } catch (IOException e) {
 	   e.printStackTrace();
